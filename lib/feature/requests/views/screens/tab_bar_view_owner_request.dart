@@ -2,7 +2,6 @@ import 'package:admin_resort_booking_app/core/components/custom_circular_progres
 import 'package:admin_resort_booking_app/core/components/custom_snack_bar.dart';
 import 'package:admin_resort_booking_app/core/constants/text_styles.dart';
 import 'package:admin_resort_booking_app/feature/requests/view_model/bloc_owner_request/owner_request_bloc.dart';
-import 'package:admin_resort_booking_app/feature/requests/views/screens/screen_owner_request_details.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/widgets/owner_request_tile.dart';
 import 'package:admin_resort_booking_app/routes/route_names.dart';
 import 'package:flutter/material.dart';

@@ -20,18 +20,21 @@ mixin _$OwnerRequestEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchOwners,
     required TResult Function(String uid) approveOwner,
+    required TResult Function(String uid) rejectOwner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchOwners,
     TResult? Function(String uid)? approveOwner,
+    TResult? Function(String uid)? rejectOwner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchOwners,
     TResult Function(String uid)? approveOwner,
+    TResult Function(String uid)? rejectOwner,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$OwnerRequestEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchOwners value) fetchOwners,
     required TResult Function(_ApproveOwner value) approveOwner,
+    required TResult Function(_RejectOwner value) rejectOwner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchOwners value)? fetchOwners,
     TResult? Function(_ApproveOwner value)? approveOwner,
+    TResult? Function(_RejectOwner value)? rejectOwner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchOwners value)? fetchOwners,
     TResult Function(_ApproveOwner value)? approveOwner,
+    TResult Function(_RejectOwner value)? rejectOwner,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,6 +126,7 @@ class _$FetchOwnersImpl implements _FetchOwners {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchOwners,
     required TResult Function(String uid) approveOwner,
+    required TResult Function(String uid) rejectOwner,
   }) {
     return fetchOwners();
   }
@@ -129,6 +136,7 @@ class _$FetchOwnersImpl implements _FetchOwners {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchOwners,
     TResult? Function(String uid)? approveOwner,
+    TResult? Function(String uid)? rejectOwner,
   }) {
     return fetchOwners?.call();
   }
@@ -138,6 +146,7 @@ class _$FetchOwnersImpl implements _FetchOwners {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchOwners,
     TResult Function(String uid)? approveOwner,
+    TResult Function(String uid)? rejectOwner,
     required TResult orElse(),
   }) {
     if (fetchOwners != null) {
@@ -151,6 +160,7 @@ class _$FetchOwnersImpl implements _FetchOwners {
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchOwners value) fetchOwners,
     required TResult Function(_ApproveOwner value) approveOwner,
+    required TResult Function(_RejectOwner value) rejectOwner,
   }) {
     return fetchOwners(this);
   }
@@ -160,6 +170,7 @@ class _$FetchOwnersImpl implements _FetchOwners {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchOwners value)? fetchOwners,
     TResult? Function(_ApproveOwner value)? approveOwner,
+    TResult? Function(_RejectOwner value)? rejectOwner,
   }) {
     return fetchOwners?.call(this);
   }
@@ -169,6 +180,7 @@ class _$FetchOwnersImpl implements _FetchOwners {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchOwners value)? fetchOwners,
     TResult Function(_ApproveOwner value)? approveOwner,
+    TResult Function(_RejectOwner value)? rejectOwner,
     required TResult orElse(),
   }) {
     if (fetchOwners != null) {
@@ -252,6 +264,7 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchOwners,
     required TResult Function(String uid) approveOwner,
+    required TResult Function(String uid) rejectOwner,
   }) {
     return approveOwner(uid);
   }
@@ -261,6 +274,7 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchOwners,
     TResult? Function(String uid)? approveOwner,
+    TResult? Function(String uid)? rejectOwner,
   }) {
     return approveOwner?.call(uid);
   }
@@ -270,6 +284,7 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchOwners,
     TResult Function(String uid)? approveOwner,
+    TResult Function(String uid)? rejectOwner,
     required TResult orElse(),
   }) {
     if (approveOwner != null) {
@@ -283,6 +298,7 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchOwners value) fetchOwners,
     required TResult Function(_ApproveOwner value) approveOwner,
+    required TResult Function(_RejectOwner value) rejectOwner,
   }) {
     return approveOwner(this);
   }
@@ -292,6 +308,7 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchOwners value)? fetchOwners,
     TResult? Function(_ApproveOwner value)? approveOwner,
+    TResult? Function(_RejectOwner value)? rejectOwner,
   }) {
     return approveOwner?.call(this);
   }
@@ -301,6 +318,7 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchOwners value)? fetchOwners,
     TResult Function(_ApproveOwner value)? approveOwner,
+    TResult Function(_RejectOwner value)? rejectOwner,
     required TResult orElse(),
   }) {
     if (approveOwner != null) {
@@ -323,6 +341,152 @@ abstract class _ApproveOwner implements OwnerRequestEvent {
 }
 
 /// @nodoc
+abstract class _$$RejectOwnerImplCopyWith<$Res> {
+  factory _$$RejectOwnerImplCopyWith(
+          _$RejectOwnerImpl value, $Res Function(_$RejectOwnerImpl) then) =
+      __$$RejectOwnerImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String uid});
+}
+
+/// @nodoc
+class __$$RejectOwnerImplCopyWithImpl<$Res>
+    extends _$OwnerRequestEventCopyWithImpl<$Res, _$RejectOwnerImpl>
+    implements _$$RejectOwnerImplCopyWith<$Res> {
+  __$$RejectOwnerImplCopyWithImpl(
+      _$RejectOwnerImpl _value, $Res Function(_$RejectOwnerImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of OwnerRequestEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? uid = null,
+  }) {
+    return _then(_$RejectOwnerImpl(
+      null == uid
+          ? _value.uid
+          : uid // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$RejectOwnerImpl implements _RejectOwner {
+  const _$RejectOwnerImpl(this.uid);
+
+  @override
+  final String uid;
+
+  @override
+  String toString() {
+    return 'OwnerRequestEvent.rejectOwner(uid: $uid)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RejectOwnerImpl &&
+            (identical(other.uid, uid) || other.uid == uid));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, uid);
+
+  /// Create a copy of OwnerRequestEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RejectOwnerImplCopyWith<_$RejectOwnerImpl> get copyWith =>
+      __$$RejectOwnerImplCopyWithImpl<_$RejectOwnerImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchOwners,
+    required TResult Function(String uid) approveOwner,
+    required TResult Function(String uid) rejectOwner,
+  }) {
+    return rejectOwner(uid);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchOwners,
+    TResult? Function(String uid)? approveOwner,
+    TResult? Function(String uid)? rejectOwner,
+  }) {
+    return rejectOwner?.call(uid);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchOwners,
+    TResult Function(String uid)? approveOwner,
+    TResult Function(String uid)? rejectOwner,
+    required TResult orElse(),
+  }) {
+    if (rejectOwner != null) {
+      return rejectOwner(uid);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchOwners value) fetchOwners,
+    required TResult Function(_ApproveOwner value) approveOwner,
+    required TResult Function(_RejectOwner value) rejectOwner,
+  }) {
+    return rejectOwner(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchOwners value)? fetchOwners,
+    TResult? Function(_ApproveOwner value)? approveOwner,
+    TResult? Function(_RejectOwner value)? rejectOwner,
+  }) {
+    return rejectOwner?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchOwners value)? fetchOwners,
+    TResult Function(_ApproveOwner value)? approveOwner,
+    TResult Function(_RejectOwner value)? rejectOwner,
+    required TResult orElse(),
+  }) {
+    if (rejectOwner != null) {
+      return rejectOwner(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RejectOwner implements OwnerRequestEvent {
+  const factory _RejectOwner(final String uid) = _$RejectOwnerImpl;
+
+  String get uid;
+
+  /// Create a copy of OwnerRequestEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RejectOwnerImplCopyWith<_$RejectOwnerImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$OwnerRequestState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -330,6 +494,8 @@ mixin _$OwnerRequestState {
     required TResult Function() loading,
     required TResult Function(List<OwnerModel> ownersList) success,
     required TResult Function(String error) error,
+    required TResult Function() requestedAccepted,
+    required TResult Function() requestedRejected,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -338,6 +504,8 @@ mixin _$OwnerRequestState {
     TResult? Function()? loading,
     TResult? Function(List<OwnerModel> ownersList)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? requestedAccepted,
+    TResult? Function()? requestedRejected,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -346,6 +514,8 @@ mixin _$OwnerRequestState {
     TResult Function()? loading,
     TResult Function(List<OwnerModel> ownersList)? success,
     TResult Function(String error)? error,
+    TResult Function()? requestedAccepted,
+    TResult Function()? requestedRejected,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -355,6 +525,8 @@ mixin _$OwnerRequestState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_RequestedAccepted value) requestedAccepted,
+    required TResult Function(_RequestedRejected value) requestedRejected,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -363,6 +535,8 @@ mixin _$OwnerRequestState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_RequestedAccepted value)? requestedAccepted,
+    TResult? Function(_RequestedRejected value)? requestedRejected,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -371,6 +545,8 @@ mixin _$OwnerRequestState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_RequestedAccepted value)? requestedAccepted,
+    TResult Function(_RequestedRejected value)? requestedRejected,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -442,6 +618,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(List<OwnerModel> ownersList) success,
     required TResult Function(String error) error,
+    required TResult Function() requestedAccepted,
+    required TResult Function() requestedRejected,
   }) {
     return initial();
   }
@@ -453,6 +631,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(List<OwnerModel> ownersList)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? requestedAccepted,
+    TResult? Function()? requestedRejected,
   }) {
     return initial?.call();
   }
@@ -464,6 +644,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(List<OwnerModel> ownersList)? success,
     TResult Function(String error)? error,
+    TResult Function()? requestedAccepted,
+    TResult Function()? requestedRejected,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -479,6 +661,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_RequestedAccepted value) requestedAccepted,
+    required TResult Function(_RequestedRejected value) requestedRejected,
   }) {
     return initial(this);
   }
@@ -490,6 +674,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_RequestedAccepted value)? requestedAccepted,
+    TResult? Function(_RequestedRejected value)? requestedRejected,
   }) {
     return initial?.call(this);
   }
@@ -501,6 +687,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_RequestedAccepted value)? requestedAccepted,
+    TResult Function(_RequestedRejected value)? requestedRejected,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -559,6 +747,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() loading,
     required TResult Function(List<OwnerModel> ownersList) success,
     required TResult Function(String error) error,
+    required TResult Function() requestedAccepted,
+    required TResult Function() requestedRejected,
   }) {
     return loading();
   }
@@ -570,6 +760,8 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? loading,
     TResult? Function(List<OwnerModel> ownersList)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? requestedAccepted,
+    TResult? Function()? requestedRejected,
   }) {
     return loading?.call();
   }
@@ -581,6 +773,8 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? loading,
     TResult Function(List<OwnerModel> ownersList)? success,
     TResult Function(String error)? error,
+    TResult Function()? requestedAccepted,
+    TResult Function()? requestedRejected,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -596,6 +790,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_RequestedAccepted value) requestedAccepted,
+    required TResult Function(_RequestedRejected value) requestedRejected,
   }) {
     return loading(this);
   }
@@ -607,6 +803,8 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_RequestedAccepted value)? requestedAccepted,
+    TResult? Function(_RequestedRejected value)? requestedRejected,
   }) {
     return loading?.call(this);
   }
@@ -618,6 +816,8 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_RequestedAccepted value)? requestedAccepted,
+    TResult Function(_RequestedRejected value)? requestedRejected,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -711,6 +911,8 @@ class _$SuccessImpl implements _Success {
     required TResult Function() loading,
     required TResult Function(List<OwnerModel> ownersList) success,
     required TResult Function(String error) error,
+    required TResult Function() requestedAccepted,
+    required TResult Function() requestedRejected,
   }) {
     return success(ownersList);
   }
@@ -722,6 +924,8 @@ class _$SuccessImpl implements _Success {
     TResult? Function()? loading,
     TResult? Function(List<OwnerModel> ownersList)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? requestedAccepted,
+    TResult? Function()? requestedRejected,
   }) {
     return success?.call(ownersList);
   }
@@ -733,6 +937,8 @@ class _$SuccessImpl implements _Success {
     TResult Function()? loading,
     TResult Function(List<OwnerModel> ownersList)? success,
     TResult Function(String error)? error,
+    TResult Function()? requestedAccepted,
+    TResult Function()? requestedRejected,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -748,6 +954,8 @@ class _$SuccessImpl implements _Success {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_RequestedAccepted value) requestedAccepted,
+    required TResult Function(_RequestedRejected value) requestedRejected,
   }) {
     return success(this);
   }
@@ -759,6 +967,8 @@ class _$SuccessImpl implements _Success {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_RequestedAccepted value)? requestedAccepted,
+    TResult? Function(_RequestedRejected value)? requestedRejected,
   }) {
     return success?.call(this);
   }
@@ -770,6 +980,8 @@ class _$SuccessImpl implements _Success {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_RequestedAccepted value)? requestedAccepted,
+    TResult Function(_RequestedRejected value)? requestedRejected,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -863,6 +1075,8 @@ class _$ErrorImpl implements _Error {
     required TResult Function() loading,
     required TResult Function(List<OwnerModel> ownersList) success,
     required TResult Function(String error) error,
+    required TResult Function() requestedAccepted,
+    required TResult Function() requestedRejected,
   }) {
     return error(this.error);
   }
@@ -874,6 +1088,8 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? loading,
     TResult? Function(List<OwnerModel> ownersList)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? requestedAccepted,
+    TResult? Function()? requestedRejected,
   }) {
     return error?.call(this.error);
   }
@@ -885,6 +1101,8 @@ class _$ErrorImpl implements _Error {
     TResult Function()? loading,
     TResult Function(List<OwnerModel> ownersList)? success,
     TResult Function(String error)? error,
+    TResult Function()? requestedAccepted,
+    TResult Function()? requestedRejected,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -900,6 +1118,8 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_RequestedAccepted value) requestedAccepted,
+    required TResult Function(_RequestedRejected value) requestedRejected,
   }) {
     return error(this);
   }
@@ -911,6 +1131,8 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_RequestedAccepted value)? requestedAccepted,
+    TResult? Function(_RequestedRejected value)? requestedRejected,
   }) {
     return error?.call(this);
   }
@@ -922,6 +1144,8 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_RequestedAccepted value)? requestedAccepted,
+    TResult Function(_RequestedRejected value)? requestedRejected,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -941,4 +1165,262 @@ abstract class _Error implements OwnerRequestState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$RequestedAcceptedImplCopyWith<$Res> {
+  factory _$$RequestedAcceptedImplCopyWith(_$RequestedAcceptedImpl value,
+          $Res Function(_$RequestedAcceptedImpl) then) =
+      __$$RequestedAcceptedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RequestedAcceptedImplCopyWithImpl<$Res>
+    extends _$OwnerRequestStateCopyWithImpl<$Res, _$RequestedAcceptedImpl>
+    implements _$$RequestedAcceptedImplCopyWith<$Res> {
+  __$$RequestedAcceptedImplCopyWithImpl(_$RequestedAcceptedImpl _value,
+      $Res Function(_$RequestedAcceptedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of OwnerRequestState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$RequestedAcceptedImpl implements _RequestedAccepted {
+  const _$RequestedAcceptedImpl();
+
+  @override
+  String toString() {
+    return 'OwnerRequestState.requestedAccepted()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RequestedAcceptedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<OwnerModel> ownersList) success,
+    required TResult Function(String error) error,
+    required TResult Function() requestedAccepted,
+    required TResult Function() requestedRejected,
+  }) {
+    return requestedAccepted();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<OwnerModel> ownersList)? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? requestedAccepted,
+    TResult? Function()? requestedRejected,
+  }) {
+    return requestedAccepted?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<OwnerModel> ownersList)? success,
+    TResult Function(String error)? error,
+    TResult Function()? requestedAccepted,
+    TResult Function()? requestedRejected,
+    required TResult orElse(),
+  }) {
+    if (requestedAccepted != null) {
+      return requestedAccepted();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+    required TResult Function(_RequestedAccepted value) requestedAccepted,
+    required TResult Function(_RequestedRejected value) requestedRejected,
+  }) {
+    return requestedAccepted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_RequestedAccepted value)? requestedAccepted,
+    TResult? Function(_RequestedRejected value)? requestedRejected,
+  }) {
+    return requestedAccepted?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    TResult Function(_RequestedAccepted value)? requestedAccepted,
+    TResult Function(_RequestedRejected value)? requestedRejected,
+    required TResult orElse(),
+  }) {
+    if (requestedAccepted != null) {
+      return requestedAccepted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RequestedAccepted implements OwnerRequestState {
+  const factory _RequestedAccepted() = _$RequestedAcceptedImpl;
+}
+
+/// @nodoc
+abstract class _$$RequestedRejectedImplCopyWith<$Res> {
+  factory _$$RequestedRejectedImplCopyWith(_$RequestedRejectedImpl value,
+          $Res Function(_$RequestedRejectedImpl) then) =
+      __$$RequestedRejectedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RequestedRejectedImplCopyWithImpl<$Res>
+    extends _$OwnerRequestStateCopyWithImpl<$Res, _$RequestedRejectedImpl>
+    implements _$$RequestedRejectedImplCopyWith<$Res> {
+  __$$RequestedRejectedImplCopyWithImpl(_$RequestedRejectedImpl _value,
+      $Res Function(_$RequestedRejectedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of OwnerRequestState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$RequestedRejectedImpl implements _RequestedRejected {
+  const _$RequestedRejectedImpl();
+
+  @override
+  String toString() {
+    return 'OwnerRequestState.requestedRejected()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RequestedRejectedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<OwnerModel> ownersList) success,
+    required TResult Function(String error) error,
+    required TResult Function() requestedAccepted,
+    required TResult Function() requestedRejected,
+  }) {
+    return requestedRejected();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<OwnerModel> ownersList)? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? requestedAccepted,
+    TResult? Function()? requestedRejected,
+  }) {
+    return requestedRejected?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<OwnerModel> ownersList)? success,
+    TResult Function(String error)? error,
+    TResult Function()? requestedAccepted,
+    TResult Function()? requestedRejected,
+    required TResult orElse(),
+  }) {
+    if (requestedRejected != null) {
+      return requestedRejected();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+    required TResult Function(_RequestedAccepted value) requestedAccepted,
+    required TResult Function(_RequestedRejected value) requestedRejected,
+  }) {
+    return requestedRejected(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_RequestedAccepted value)? requestedAccepted,
+    TResult? Function(_RequestedRejected value)? requestedRejected,
+  }) {
+    return requestedRejected?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    TResult Function(_RequestedAccepted value)? requestedAccepted,
+    TResult Function(_RequestedRejected value)? requestedRejected,
+    required TResult orElse(),
+  }) {
+    if (requestedRejected != null) {
+      return requestedRejected(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RequestedRejected implements OwnerRequestState {
+  const factory _RequestedRejected() = _$RequestedRejectedImpl;
 }

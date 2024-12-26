@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:admin_resort_booking_app/core/constants/theme.dart';
 import 'package:admin_resort_booking_app/core/utils/custom_exceptions.dart';
 import 'package:admin_resort_booking_app/core/utils/screen_size.dart';
-import 'package:admin_resort_booking_app/feature/home/views/screen_home.dart';
 import 'package:admin_resort_booking_app/feature/requests/repository/owner_request_repository.dart';
 import 'package:admin_resort_booking_app/feature/requests/services/owner_request_service.dart';
 import 'package:admin_resort_booking_app/feature/requests/view_model/bloc_owner_request/owner_request_bloc.dart';
@@ -22,17 +21,17 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // if (kDebugMode) {
-  //   try {
-  //     final deviceIp = '172.16.4.113';
-  //     // final deviceIp = '192.168.1.78';
-  //     await FirebaseAuth.instance.useAuthEmulator(deviceIp, 9099);
-  //     FirebaseFirestore.instance.useFirestoreEmulator(deviceIp, 8089);
-  //     log('Local firestore and auth is connected');
-  //   } catch (e) {
-  //     log(e.toString());
-  //   }
-  // }
+  if (kDebugMode) {
+    try {
+      final deviceIp = '172.16.4.113';
+      // final deviceIp = '192.168.1.78';
+      await FirebaseAuth.instance.useAuthEmulator(deviceIp, 9099);
+      FirebaseFirestore.instance.useFirestoreEmulator(deviceIp, 8089);
+      log('Local firestore and auth is connected');
+    } catch (e) {
+      log(e.toString());
+    }
+  }
 
   runApp(const ResortAdminApp());
 }

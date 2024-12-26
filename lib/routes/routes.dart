@@ -5,7 +5,6 @@ import 'package:admin_resort_booking_app/feature/home/views/screen_home.dart';
 import 'package:admin_resort_booking_app/feature/owner_management/views/screen_owner_management.dart';
 import 'package:admin_resort_booking_app/feature/requests/model/owner_model.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/screens/image_viewer.dart';
-import 'package:admin_resort_booking_app/feature/requests/views/screens/pdf_viewer.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/screens/screen_owner_request_details.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/screens/screen_requests.dart';
 import 'package:admin_resort_booking_app/feature/revenue_management/views/screen_revenue_management.dart';
@@ -137,27 +136,6 @@ final routes = GoRouter(
                     ),
                   );
                 }),
-            // GoRoute(
-            //     path: '/${AppRoutes.pdfViewer}',
-            //     redirect: (context, state) {
-            //       if (state.extra == null ||
-            //           state.extra is! Map<String, dynamic>) {
-            //         return '/${AppRoutes.request}';
-            //       }
-            //       return null;
-            //     },
-            //     pageBuilder: (context, state) {
-            //       final extra = state.extra as Map<String, dynamic>;
-            //       final pdf = extra['file'] as String;
-            //       final fileName = extra['fileName'] as String;
-            //       return customTransitionPage(
-            //         state,
-            //         SyncfusionPDFViewer(
-            //           base64: pdf,
-            //           fileName: fileName,
-            //         ),
-            //       );
-            //     }),
           ],
         ),
 

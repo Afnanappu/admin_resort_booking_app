@@ -26,12 +26,26 @@ class OwnerRequestService {
   }
 
   Future<void> approveOwnerRequest(String uid) async {
-    ownerCollection.doc(uid).set(
-        {
-          'isVerified': true,
-        },
-        SetOptions(
-          merge: true,
-        ));
+    try {
+      await ownerCollection.doc(uid).set(
+          {
+            'isVerified': true,
+          },
+          SetOptions(
+            merge: true,
+          ));
+    } on FirebaseException catch (e, stack) {
+      log(e.toString(), stackTrace: stack);
+      throw AppExceptionHandler.handleFirestoreException(e);
+    }
+  }
+
+  Future<void> rejectOwnerRequest(String uid) async {
+    try {
+      await ownerCollection.doc(uid).delete();
+    } on FirebaseException catch (e, stack) {
+      log(e.toString(), stackTrace: stack);
+      throw AppExceptionHandler.handleFirestoreException(e);
+    }
   }
 }

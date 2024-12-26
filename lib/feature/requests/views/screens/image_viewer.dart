@@ -21,17 +21,19 @@ class ImageViewer extends StatelessWidget {
             child: Image.memory(base64Decode(image)),
           ),
           Positioned(
-              right: 0,
-              child: IconButton(
-                  iconSize: 28,
-                  onPressed: () {
-                    downloadBase64StringFile(
-                      fileName: fileName,
-                      base64String: image,
-                      type: 'image/$fileExtension',
-                    );
-                  },
-                  icon: Icon(Icons.download)))
+            right: 0,
+            child: IconButton(
+              iconSize: 28,
+              onPressed: () {
+                downloadBase64StringFile(
+                  fileName: fileName,
+                  base64String: image,
+                  type: 'image/$fileExtension',
+                );
+              },
+              icon: Icon(Icons.download),
+            ),
+          )
         ],
       ),
     );

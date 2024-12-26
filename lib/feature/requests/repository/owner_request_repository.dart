@@ -33,4 +33,11 @@ class OwnerRequestRepository {
       rethrow;
     }
   }
+  Future<void> rejectOwnerRequest(String uid) async {
+    try {
+      await _service.rejectOwnerRequest(uid);
+    } catch (e) {
+      rethrow;
+    }
+  }
 }

@@ -1,33 +1,21 @@
-import 'package:admin_resort_booking_app/feature/additional_options/views/screen_additional_options.dart';
-import 'package:admin_resort_booking_app/feature/dashboard/views/screen_dashboard.dart';
-import 'package:admin_resort_booking_app/feature/issue_posting/views/screen_issue_posting.dart';
-import 'package:admin_resort_booking_app/feature/owner_management/views/screen_owner_management.dart';
-import 'package:admin_resort_booking_app/feature/push_notification/views/screen_push_notification.dart';
-import 'package:admin_resort_booking_app/feature/requests/views/screen_requests.dart';
-import 'package:admin_resort_booking_app/feature/revenue_management/views/screen_revenue_management.dart';
-import 'package:admin_resort_booking_app/feature/user_management/views/screen_user_management.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class AdminDashboard extends StatefulWidget {
-  const AdminDashboard({super.key});
+class HomeWithSideRail extends StatelessWidget {
+  HomeWithSideRail({super.key, required this.navigationShell});
 
-  @override
-  State<AdminDashboard> createState() => _AdminDashboardState();
-}
+  final StatefulNavigationShell navigationShell;
 
-class _AdminDashboardState extends State<AdminDashboard> {
-  int _selectedIndex = 0;
-
-  final List<Widget> _pages = [
-    const DashboardPage(),
-    const UserManagementPage(),
-    const OwnerManagementPage(),
-    const RequestPage(),
-    const RevenueReportPage(),
-    const PushNotificationPage(),
-    const IssuePostingPage(),
-    const AdditionalOptionsPage(),
-  ];
+  // final List<Widget> _pages = [
+  //   const DashboardPage(),
+  //   const UserManagementPage(),
+  //   const OwnerManagementPage(),
+  //   const RequestPage(),
+  //   const RevenueReportPage(),
+  //   const PushNotificationPage(),
+  //   const IssuePostingPage(),
+  //   const AdditionalOptionsPage(),
+  // ];
 
   final List<String> _pageTitles = [
     "Dashboard",
@@ -45,20 +33,21 @@ class _AdminDashboardState extends State<AdminDashboard> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFFB6E34),
-        title: Text(_pageTitles[_selectedIndex],
+        title: Text(_pageTitles[navigationShell.currentIndex],
             style: const TextStyle(color: Colors.white)),
         centerTitle: true,
       ),
       body: Row(
         children: [
           NavigationRail(
-            extended: true,
+            extended: MediaQuery.of(context).size.width > 800,
             backgroundColor: const Color(0xFFFFE4D9),
-            selectedIndex: _selectedIndex,
+            selectedIndex: navigationShell.currentIndex,
             onDestinationSelected: (index) {
-              setState(() {
-                _selectedIndex = index;
-              });
+              navigationShell.goBranch(
+                index,
+                initialLocation: index == navigationShell.currentIndex,
+              );
             },
             destinations: const [
               NavigationRailDestination(
@@ -98,7 +87,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
             unselectedLabelTextStyle: const TextStyle(color: Color(0xFF8B8A8A)),
           ),
           Expanded(
-            child: _pages[_selectedIndex], 
+            child: navigationShell,
           ),
         ],
       ),

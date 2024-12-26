@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
-bool userCurrentAuthState(){
+bool adminCurrentAuthState(){
   if(FirebaseAuth.instance.currentUser != null){
     return true;
   }

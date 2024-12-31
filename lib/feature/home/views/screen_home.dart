@@ -1,47 +1,21 @@
+import 'package:admin_resort_booking_app/core/constants/my_colors.dart';
+import 'package:admin_resort_booking_app/core/constants/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeWithSideRail extends StatelessWidget {
-  HomeWithSideRail({super.key, required this.navigationShell});
+  const HomeWithSideRail({super.key, required this.navigationShell});
 
   final StatefulNavigationShell navigationShell;
-
-  // final List<Widget> _pages = [
-  //   const DashboardPage(),
-  //   const UserManagementPage(),
-  //   const OwnerManagementPage(),
-  //   const RequestPage(),
-  //   const RevenueReportPage(),
-  //   const PushNotificationPage(),
-  //   const IssuePostingPage(),
-  //   const AdditionalOptionsPage(),
-  // ];
-
-  final List<String> _pageTitles = [
-    "Dashboard",
-    "User Management",
-    "Owner Management",
-    "Requests",
-    "Revenue & Reports",
-    "Push Notifications",
-    "Issue Posting",
-    "Additional Options",
-  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFFFB6E34),
-        title: Text(_pageTitles[navigationShell.currentIndex],
-            style: const TextStyle(color: Colors.white)),
-        centerTitle: true,
-      ),
       body: Row(
         children: [
           NavigationRail(
             extended: MediaQuery.of(context).size.width > 800,
-            backgroundColor: const Color(0xFFFFE4D9),
+            backgroundColor: MyColors.orangeShade600,
             selectedIndex: navigationShell.currentIndex,
             onDestinationSelected: (index) {
               navigationShell.goBranch(
@@ -80,11 +54,13 @@ class HomeWithSideRail extends StatelessWidget {
               ),
               NavigationRailDestination(
                 icon: Icon(Icons.settings),
-                label: Text('Options'),
+                label: Text('Additional Options'),
               ),
             ],
-            selectedLabelTextStyle: const TextStyle(color: Color(0xFFFB6E34)),
-            unselectedLabelTextStyle: const TextStyle(color: Color(0xFF8B8A8A)),
+            indicatorColor: MyColors.orangeBackgroundDark,
+            selectedLabelTextStyle:
+                MyTextStyles.bodyLargeNormalWhite.copyWith(fontSize: 18),
+            unselectedLabelTextStyle: MyTextStyles.bodyLargeNormalWhite,
           ),
           Expanded(
             child: navigationShell,

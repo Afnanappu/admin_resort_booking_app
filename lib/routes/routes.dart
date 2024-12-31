@@ -1,8 +1,11 @@
 import 'dart:developer';
 
+import 'package:admin_resort_booking_app/feature/additional_options/views/screens/screen_additional_options.dart';
 import 'package:admin_resort_booking_app/feature/dashboard/views/screen_dashboard.dart';
 import 'package:admin_resort_booking_app/feature/home/views/screen_home.dart';
+import 'package:admin_resort_booking_app/feature/issue_posting/views/screen_issue_posting.dart';
 import 'package:admin_resort_booking_app/feature/owner_management/views/screen_owner_management.dart';
+import 'package:admin_resort_booking_app/feature/push_notification/views/screen_push_notification.dart';
 import 'package:admin_resort_booking_app/feature/requests/model/owner_model.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/screens/image_viewer.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/screens/screen_owner_request_details.dart';
@@ -148,6 +151,46 @@ final routes = GoRouter(
               pageBuilder: (context, state) => customTransitionPage(
                 state,
                 RevenueReportPage(),
+              ),
+            ),
+          ],
+        ),
+        //owner management
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              name: AppRoutes.pushNotification,
+              path: '/${AppRoutes.pushNotification}',
+              pageBuilder: (context, state) => customTransitionPage(
+                state,
+                PushNotificationPage(),
+              ),
+            ),
+          ],
+        ),
+
+        //issues
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              name: AppRoutes.issues,
+              path: '/${AppRoutes.issues}',
+              pageBuilder: (context, state) => customTransitionPage(
+                state,
+                IssuePostingPage(),
+              ),
+            ),
+          ],
+        ),
+        //options
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              name: AppRoutes.additionalOptions,
+              path: '/${AppRoutes.additionalOptions}',
+              pageBuilder: (context, state) => customTransitionPage(
+                state,
+                AdditionalOptionsPage(),
               ),
             ),
           ],

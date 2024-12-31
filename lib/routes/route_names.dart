@@ -8,4 +8,7 @@ class AppRoutes {
   static const revenueAndReport = 'revenue-and-report';
   // static const pdfViewer = 'pdf-viewer'; 
   static const imageViewer = 'image-viewer'; 
+  static const additionalOptions = 'additional-options';
+  static const issues = 'issues';
+  static const pushNotification = 'push-notification';
 }

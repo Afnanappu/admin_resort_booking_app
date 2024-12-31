@@ -6,7 +6,10 @@ class IssuePostingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: Text('Issue Posting Content',
-            style: Theme.of(context).textTheme.headlineMedium));
+      child: Text(
+        'Issue Posting Content',
+        style: Theme.of(context).textTheme.headlineMedium,
+      ),
+    );
   }
 }

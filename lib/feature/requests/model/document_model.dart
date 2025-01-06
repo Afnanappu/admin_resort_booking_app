@@ -5,25 +5,25 @@ class DocumentModel {
   final String fileExtension;
   final String filePath;
   final String fileName;
-  final String file;
+  final String base64file;
   DocumentModel({
     required this.fileExtension,
     required this.filePath,
     required this.fileName,
-    required this.file,
+    required this.base64file,
   });
 
   DocumentModel copyWith({
     String? fileExtension,
     String? filePath,
     String? fileName,
-    String? file,
+    String? base64file,
   }) {
     return DocumentModel(
       fileExtension: fileExtension ?? this.fileExtension,
       filePath: filePath ?? this.filePath,
       fileName: fileName ?? this.fileName,
-      file: file ?? this.file,
+      base64file: base64file ?? this.base64file,
     );
   }
 
@@ -32,7 +32,7 @@ class DocumentModel {
       'fileExtension': fileExtension,
       'filePath': filePath,
       'fileName': fileName,
-      'file': file,
+      'base64file': base64file,
     };
   }
 
@@ -41,7 +41,7 @@ class DocumentModel {
       fileExtension: map['fileExtension'] as String,
       filePath: map['filePath'] as String,
       fileName: map['fileName'] as String,
-      file: map['file'] as String,
+      base64file: map['base64file'] as String,
     );
   }
 
@@ -52,25 +52,24 @@ class DocumentModel {
 
   @override
   String toString() {
-    return 'DocumentModel(fileExtension: $fileExtension, filePath: $filePath, fileName: $fileName, file: $file)';
+    return 'DocumentModel(fileExtension: $fileExtension, filePath: $filePath, fileName: $fileName, base64file: $base64file)';
   }
 
   @override
   bool operator ==(covariant DocumentModel other) {
     if (identical(this, other)) return true;
-  
-    return 
-      other.fileExtension == fileExtension &&
-      other.filePath == filePath &&
-      other.fileName == fileName &&
-      other.file == file;
+
+    return other.fileExtension == fileExtension &&
+        other.filePath == filePath &&
+        other.fileName == fileName &&
+        other.base64file == base64file;
   }
 
   @override
   int get hashCode {
     return fileExtension.hashCode ^
-      filePath.hashCode ^
-      fileName.hashCode ^
-      file.hashCode;
+        filePath.hashCode ^
+        fileName.hashCode ^
+        base64file.hashCode;
   }
 }

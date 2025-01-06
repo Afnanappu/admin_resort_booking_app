@@ -68,4 +68,41 @@ class MyTextStyles {
     fontWeight: FontWeight.w400,
     fontSize: 13,
   );
+
+  static const TextStyle titleLargeBoldBlack = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  );
+
+  // static const TextStyle titleMediumSemiBoldBlack = TextStyle(
+  //   fontSize: 20,
+  //   fontWeight: FontWeight.w600,
+  //   color: Colors.black,
+  // );
+
+  static const TextStyle titleSmallRegularGrey = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+    color: Colors.grey,
+  );
+
+  // Body Styles
+  static const TextStyle bodySmallRegularGrey = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+    color: Colors.grey,
+  );
+
+  static const TextStyle bodyMediumRegularBlack = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+    color: Colors.black,
+  );
+
+  static const TextStyle bodyLargeSemiBoldBlack = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
+  );
 }

@@ -1,4 +1,5 @@
 import 'package:admin_resort_booking_app/core/constants/my_colors.dart';
+import 'package:admin_resort_booking_app/core/constants/my_constants.dart';
 import 'package:admin_resort_booking_app/core/constants/text_styles.dart';
 import 'package:admin_resort_booking_app/core/utils/send_email.dart';
 import 'package:admin_resort_booking_app/feature/requests/view_model/bloc_owner_request/owner_request_bloc.dart';
@@ -58,15 +59,17 @@ class ActionButtonsForRequestDetailsScreen extends StatelessWidget {
                     // Approve logic
                     final isSent = await sendEmail(name, email, ownerId);
                     if (isSent) {
-                      context
-                          .read<OwnerRequestBloc>()
-                          .add(OwnerRequestEvent.approveOwner(uid));
+                      context.read<OwnerRequestBloc>().add(
+                            OwnerRequestEvent.approveOwner(uid),
+                          );
                     }
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: MyColors.orange,
                     padding: const EdgeInsets.symmetric(
                         horizontal: 20, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(borderRad10)),
                   ),
                   icon: const Icon(
                     Icons.check,
@@ -86,6 +89,8 @@ class ActionButtonsForRequestDetailsScreen extends StatelessWidget {
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 20, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(borderRad10)),
                     side: const BorderSide(color: Colors.red),
                   ),
                   icon: const Icon(Icons.close, color: Colors.red),

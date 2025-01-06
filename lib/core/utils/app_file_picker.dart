@@ -1,59 +1,80 @@
-// import 'dart:convert';
-// import 'dart:developer';
-// Future<PickedFileModel?> pickFileFromDevice() async {
-//   final result = await FilePicker.platform.pickFiles(
-//     type: FileType.custom,
-//     allowedExtensions: ['jpg', 'jpeg', 'png', 'pdf'],
-//     withData: true,
-//     allowCompression: true,
-//   );
+import 'dart:convert';
+import 'dart:developer';
 
-//   log("${result?.names}");
+import 'package:admin_resort_booking_app/core/models/picked_file_model.dart';
+import 'package:file_picker/file_picker.dart';
 
-//   try {
-//     if (result != null) {
-//       final file = result.files.first;
-//       final fileName = file.name;
-//       final base64String = base64Encode(file.bytes!);
+Future<PickedFileModel?> pickFileFromDevice({bool allowPdf = false}) async {
+  final allowedExtensions = ['jpg', 'jpeg', 'png'];
+  //allow pdf if true
+  if (allowPdf) allowedExtensions.add('pdf');
+  final result = await FilePicker.platform.pickFiles(
+    type: FileType.custom,
+    allowedExtensions: allowedExtensions,
+    withData: true,
+    allowCompression: true,
+  );
 
-//       //storing file
-//       return PickedFileModel(fileName, base64String);
-//     } else {
-//       return null;
-//     }
-//   } catch (e, stack) {
-//     log(e.toString(), stackTrace: stack);
-//     return null;
-//   }
-// }
+  log("${result?.names}");
 
-// Future<List<PickedFileModel>> pickMultiFileFromDevice() async {
-//   final result = await FilePicker.platform.pickFiles(
-//     type: FileType.custom,
-//     allowedExtensions: ['jpg', 'jpeg', 'png', 'pdf'],
-//     withData: true,
-//     allowMultiple: true,
-//     allowCompression: true,
-//   );
+  try {
+    if (result != null) {
+      final file = result.files.first;
+      final fileName = file.name;
+      final base64String = base64Encode(file.bytes!);
 
-//   log("${result?.names}");
+      //storing file
+      return PickedFileModel(
+        base64file: base64String,
+        fileName: fileName,
+        fileExtension: file.extension!,
+      );
+    } else {
+      return null;
+    }
+  } catch (e, stack) {
+    log(e.toString(), stackTrace: stack);
+    return null;
+  }
+}
 
-//   try {
-//     final selectedFiles = <PickedFileModel>[];
-//     if (result != null) {
-//       for (var file in result.files) {
-//         final fileName = file.name;
-//         final base64String = base64Encode(file.bytes!);
-//         selectedFiles.add(PickedFileModel(fileName, base64String));
-//       }
+Future<List<PickedFileModel>> pickMultiFileFromDevice(
+    {bool allowPdf = true}) async {
+  final allowedExtensions = ['jpg', 'jpeg', 'png'];
+  //allow pdf if true
+  if (allowPdf) allowedExtensions.add('pdf');
 
-//       //storing file
-//       return selectedFiles;
-//     } else {
-//       return [];
-//     }
-//   } catch (e, stack) {
-//     log(e.toString(), stackTrace: stack);
-//     return [];
-//   }
-// }
+  final result = await FilePicker.platform.pickFiles(
+    type: FileType.custom,
+    allowedExtensions: allowedExtensions,
+    withData: true,
+    allowMultiple: true,
+    allowCompression: true,
+  );
+
+  log("${result?.names}");
+  try {
+    final selectedFiles = <PickedFileModel>[];
+    if (result != null) {
+      for (var file in result.files) {
+        final fileName = file.name;
+        final base64String = base64Encode(file.bytes!);
+        selectedFiles.add(
+          PickedFileModel(
+            fileName: fileName,
+            base64file: base64String,
+            fileExtension: file.extension!,
+          ),
+        );
+      }
+
+      //storing file
+      return selectedFiles;
+    } else {
+      throw 'Picking file failed';
+    }
+  } catch (e, stack) {
+    log(e.toString(), stackTrace: stack);
+    return [];
+  }
+}

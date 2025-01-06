@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
 String downloadBase64StringFile({

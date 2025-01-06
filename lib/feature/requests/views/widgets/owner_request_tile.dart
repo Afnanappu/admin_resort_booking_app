@@ -1,50 +1,50 @@
-import 'dart:io';
-
-import 'package:admin_resort_booking_app/core/constants/spaces.dart';
 import 'package:admin_resort_booking_app/core/constants/text_styles.dart';
+import 'package:admin_resort_booking_app/feature/requests/model/request_owner_model.dart';
+import 'package:admin_resort_booking_app/feature/requests/view_model/cubit/owner_request_data_cubit.dart';
+import 'package:admin_resort_booking_app/routes/route_names.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
-class OwnerRequestTile extends StatelessWidget {
-  const OwnerRequestTile({
+class OwnerRequestCard extends StatelessWidget {
+  const OwnerRequestCard({
     super.key,
-    required this.title,
-    required this.email,
-    this.profile,
-    this.onPressed,
+    required this.owner,
   });
-  final String title;
-  final String email;
-  final String? profile;
-  final void Function()? onPressed;
+
+  final RequestOwnerModel owner;
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5),
-      child: Card(
-        margin: const EdgeInsets.all(10),
-        child: ListTile(
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
-              MySpaces.flex1,
-              Text(email),
-              MySpaces.flex1
-            ],
-          ),
-          leading: profile != null
-              ? Image.file(File(profile!))
-              : const Icon(
-                  Icons.person,
-                  color: Color(0xFFFB6E34),
-                  size: 30,
-                ),
-          trailing: ElevatedButton(
-            onPressed: onPressed,
-            child: Text(
-              'Verify',
-              style: MyTextStyles.bodyLargeNormalWhite,
-            ),
+    return Card(
+      elevation: 3,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: ListTile(
+        leading: CircleAvatar(
+          radius: 24,
+          backgroundImage: NetworkImage(
+              'https://media.istockphoto.com/id/1130884625/vector/user-member-vector-icon-for-ui-user-interface-or-profile-face-avatar-app-in-circle-design.jpg?s=612x612&w=0&k=20&c=1ky-gNHiS2iyLsUPQkxAtPBWH1BZt0PKBB1WBtxQJRE='),
+          backgroundColor: Colors.grey[200],
+        ),
+        title: Text(
+          owner.name,
+          style: MyTextStyles.titleMediumSemiBoldBlack,
+        ),
+        subtitle: Text(
+          owner.email,
+          style: MyTextStyles.bodySmallRegularGrey,
+        ),
+        trailing: ElevatedButton(
+          onPressed: () {
+            context.read<OwnerRequestDataCubit>().setOwnerData(owner);
+            context
+                .push("/${AppRoutes.request}/${AppRoutes.requestOwnerDetails}");
+          },
+          child: Text(
+            "Details",
+            style: MyTextStyles.bodyLargeNormalWhite,
           ),
         ),
       ),

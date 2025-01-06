@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'owner_request_bloc.dart';
+part of 'property_request_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,107 +15,108 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$OwnerRequestEvent {
+mixin _$PropertyRequestEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() fetchOwners,
-    required TResult Function(String uid) approveOwner,
-    required TResult Function(String uid) rejectOwner,
+    required TResult Function() fetchProperty,
+    required TResult Function(String id) approveProperty,
+    required TResult Function(String id) rejectProperty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? fetchOwners,
-    TResult? Function(String uid)? approveOwner,
-    TResult? Function(String uid)? rejectOwner,
+    TResult? Function()? fetchProperty,
+    TResult? Function(String id)? approveProperty,
+    TResult? Function(String id)? rejectProperty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? fetchOwners,
-    TResult Function(String uid)? approveOwner,
-    TResult Function(String uid)? rejectOwner,
+    TResult Function()? fetchProperty,
+    TResult Function(String id)? approveProperty,
+    TResult Function(String id)? rejectProperty,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FetchOwners value) fetchOwners,
-    required TResult Function(_ApproveOwner value) approveOwner,
-    required TResult Function(_RejectOwner value) rejectOwner,
+    required TResult Function(_FetchProperty value) fetchProperty,
+    required TResult Function(_ApproveProperty value) approveProperty,
+    required TResult Function(_RejectProperty value) rejectProperty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_FetchOwners value)? fetchOwners,
-    TResult? Function(_ApproveOwner value)? approveOwner,
-    TResult? Function(_RejectOwner value)? rejectOwner,
+    TResult? Function(_FetchProperty value)? fetchProperty,
+    TResult? Function(_ApproveProperty value)? approveProperty,
+    TResult? Function(_RejectProperty value)? rejectProperty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FetchOwners value)? fetchOwners,
-    TResult Function(_ApproveOwner value)? approveOwner,
-    TResult Function(_RejectOwner value)? rejectOwner,
+    TResult Function(_FetchProperty value)? fetchProperty,
+    TResult Function(_ApproveProperty value)? approveProperty,
+    TResult Function(_RejectProperty value)? rejectProperty,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $OwnerRequestEventCopyWith<$Res> {
-  factory $OwnerRequestEventCopyWith(
-          OwnerRequestEvent value, $Res Function(OwnerRequestEvent) then) =
-      _$OwnerRequestEventCopyWithImpl<$Res, OwnerRequestEvent>;
+abstract class $PropertyRequestEventCopyWith<$Res> {
+  factory $PropertyRequestEventCopyWith(PropertyRequestEvent value,
+          $Res Function(PropertyRequestEvent) then) =
+      _$PropertyRequestEventCopyWithImpl<$Res, PropertyRequestEvent>;
 }
 
 /// @nodoc
-class _$OwnerRequestEventCopyWithImpl<$Res, $Val extends OwnerRequestEvent>
-    implements $OwnerRequestEventCopyWith<$Res> {
-  _$OwnerRequestEventCopyWithImpl(this._value, this._then);
+class _$PropertyRequestEventCopyWithImpl<$Res,
+        $Val extends PropertyRequestEvent>
+    implements $PropertyRequestEventCopyWith<$Res> {
+  _$PropertyRequestEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of OwnerRequestEvent
+  /// Create a copy of PropertyRequestEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$FetchOwnersImplCopyWith<$Res> {
-  factory _$$FetchOwnersImplCopyWith(
-          _$FetchOwnersImpl value, $Res Function(_$FetchOwnersImpl) then) =
-      __$$FetchOwnersImplCopyWithImpl<$Res>;
+abstract class _$$FetchPropertyImplCopyWith<$Res> {
+  factory _$$FetchPropertyImplCopyWith(
+          _$FetchPropertyImpl value, $Res Function(_$FetchPropertyImpl) then) =
+      __$$FetchPropertyImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$FetchOwnersImplCopyWithImpl<$Res>
-    extends _$OwnerRequestEventCopyWithImpl<$Res, _$FetchOwnersImpl>
-    implements _$$FetchOwnersImplCopyWith<$Res> {
-  __$$FetchOwnersImplCopyWithImpl(
-      _$FetchOwnersImpl _value, $Res Function(_$FetchOwnersImpl) _then)
+class __$$FetchPropertyImplCopyWithImpl<$Res>
+    extends _$PropertyRequestEventCopyWithImpl<$Res, _$FetchPropertyImpl>
+    implements _$$FetchPropertyImplCopyWith<$Res> {
+  __$$FetchPropertyImplCopyWithImpl(
+      _$FetchPropertyImpl _value, $Res Function(_$FetchPropertyImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of OwnerRequestEvent
+  /// Create a copy of PropertyRequestEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$FetchOwnersImpl implements _FetchOwners {
-  const _$FetchOwnersImpl();
+class _$FetchPropertyImpl implements _FetchProperty {
+  const _$FetchPropertyImpl();
 
   @override
   String toString() {
-    return 'OwnerRequestEvent.fetchOwners()';
+    return 'PropertyRequestEvent.fetchProperty()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$FetchOwnersImpl);
+        (other.runtimeType == runtimeType && other is _$FetchPropertyImpl);
   }
 
   @override
@@ -124,33 +125,33 @@ class _$FetchOwnersImpl implements _FetchOwners {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() fetchOwners,
-    required TResult Function(String uid) approveOwner,
-    required TResult Function(String uid) rejectOwner,
+    required TResult Function() fetchProperty,
+    required TResult Function(String id) approveProperty,
+    required TResult Function(String id) rejectProperty,
   }) {
-    return fetchOwners();
+    return fetchProperty();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? fetchOwners,
-    TResult? Function(String uid)? approveOwner,
-    TResult? Function(String uid)? rejectOwner,
+    TResult? Function()? fetchProperty,
+    TResult? Function(String id)? approveProperty,
+    TResult? Function(String id)? rejectProperty,
   }) {
-    return fetchOwners?.call();
+    return fetchProperty?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? fetchOwners,
-    TResult Function(String uid)? approveOwner,
-    TResult Function(String uid)? rejectOwner,
+    TResult Function()? fetchProperty,
+    TResult Function(String id)? approveProperty,
+    TResult Function(String id)? rejectProperty,
     required TResult orElse(),
   }) {
-    if (fetchOwners != null) {
-      return fetchOwners();
+    if (fetchProperty != null) {
+      return fetchProperty();
     }
     return orElse();
   }
@@ -158,70 +159,70 @@ class _$FetchOwnersImpl implements _FetchOwners {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FetchOwners value) fetchOwners,
-    required TResult Function(_ApproveOwner value) approveOwner,
-    required TResult Function(_RejectOwner value) rejectOwner,
+    required TResult Function(_FetchProperty value) fetchProperty,
+    required TResult Function(_ApproveProperty value) approveProperty,
+    required TResult Function(_RejectProperty value) rejectProperty,
   }) {
-    return fetchOwners(this);
+    return fetchProperty(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_FetchOwners value)? fetchOwners,
-    TResult? Function(_ApproveOwner value)? approveOwner,
-    TResult? Function(_RejectOwner value)? rejectOwner,
+    TResult? Function(_FetchProperty value)? fetchProperty,
+    TResult? Function(_ApproveProperty value)? approveProperty,
+    TResult? Function(_RejectProperty value)? rejectProperty,
   }) {
-    return fetchOwners?.call(this);
+    return fetchProperty?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FetchOwners value)? fetchOwners,
-    TResult Function(_ApproveOwner value)? approveOwner,
-    TResult Function(_RejectOwner value)? rejectOwner,
+    TResult Function(_FetchProperty value)? fetchProperty,
+    TResult Function(_ApproveProperty value)? approveProperty,
+    TResult Function(_RejectProperty value)? rejectProperty,
     required TResult orElse(),
   }) {
-    if (fetchOwners != null) {
-      return fetchOwners(this);
+    if (fetchProperty != null) {
+      return fetchProperty(this);
     }
     return orElse();
   }
 }
 
-abstract class _FetchOwners implements OwnerRequestEvent {
-  const factory _FetchOwners() = _$FetchOwnersImpl;
+abstract class _FetchProperty implements PropertyRequestEvent {
+  const factory _FetchProperty() = _$FetchPropertyImpl;
 }
 
 /// @nodoc
-abstract class _$$ApproveOwnerImplCopyWith<$Res> {
-  factory _$$ApproveOwnerImplCopyWith(
-          _$ApproveOwnerImpl value, $Res Function(_$ApproveOwnerImpl) then) =
-      __$$ApproveOwnerImplCopyWithImpl<$Res>;
+abstract class _$$ApprovePropertyImplCopyWith<$Res> {
+  factory _$$ApprovePropertyImplCopyWith(_$ApprovePropertyImpl value,
+          $Res Function(_$ApprovePropertyImpl) then) =
+      __$$ApprovePropertyImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String uid});
+  $Res call({String id});
 }
 
 /// @nodoc
-class __$$ApproveOwnerImplCopyWithImpl<$Res>
-    extends _$OwnerRequestEventCopyWithImpl<$Res, _$ApproveOwnerImpl>
-    implements _$$ApproveOwnerImplCopyWith<$Res> {
-  __$$ApproveOwnerImplCopyWithImpl(
-      _$ApproveOwnerImpl _value, $Res Function(_$ApproveOwnerImpl) _then)
+class __$$ApprovePropertyImplCopyWithImpl<$Res>
+    extends _$PropertyRequestEventCopyWithImpl<$Res, _$ApprovePropertyImpl>
+    implements _$$ApprovePropertyImplCopyWith<$Res> {
+  __$$ApprovePropertyImplCopyWithImpl(
+      _$ApprovePropertyImpl _value, $Res Function(_$ApprovePropertyImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of OwnerRequestEvent
+  /// Create a copy of PropertyRequestEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? uid = null,
+    Object? id = null,
   }) {
-    return _then(_$ApproveOwnerImpl(
-      null == uid
-          ? _value.uid
-          : uid // ignore: cast_nullable_to_non_nullable
+    return _then(_$ApprovePropertyImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -229,66 +230,67 @@ class __$$ApproveOwnerImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ApproveOwnerImpl implements _ApproveOwner {
-  const _$ApproveOwnerImpl(this.uid);
+class _$ApprovePropertyImpl implements _ApproveProperty {
+  const _$ApprovePropertyImpl(this.id);
 
   @override
-  final String uid;
+  final String id;
 
   @override
   String toString() {
-    return 'OwnerRequestEvent.approveOwner(uid: $uid)';
+    return 'PropertyRequestEvent.approveProperty(id: $id)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ApproveOwnerImpl &&
-            (identical(other.uid, uid) || other.uid == uid));
+            other is _$ApprovePropertyImpl &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, uid);
+  int get hashCode => Object.hash(runtimeType, id);
 
-  /// Create a copy of OwnerRequestEvent
+  /// Create a copy of PropertyRequestEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ApproveOwnerImplCopyWith<_$ApproveOwnerImpl> get copyWith =>
-      __$$ApproveOwnerImplCopyWithImpl<_$ApproveOwnerImpl>(this, _$identity);
+  _$$ApprovePropertyImplCopyWith<_$ApprovePropertyImpl> get copyWith =>
+      __$$ApprovePropertyImplCopyWithImpl<_$ApprovePropertyImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() fetchOwners,
-    required TResult Function(String uid) approveOwner,
-    required TResult Function(String uid) rejectOwner,
+    required TResult Function() fetchProperty,
+    required TResult Function(String id) approveProperty,
+    required TResult Function(String id) rejectProperty,
   }) {
-    return approveOwner(uid);
+    return approveProperty(id);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? fetchOwners,
-    TResult? Function(String uid)? approveOwner,
-    TResult? Function(String uid)? rejectOwner,
+    TResult? Function()? fetchProperty,
+    TResult? Function(String id)? approveProperty,
+    TResult? Function(String id)? rejectProperty,
   }) {
-    return approveOwner?.call(uid);
+    return approveProperty?.call(id);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? fetchOwners,
-    TResult Function(String uid)? approveOwner,
-    TResult Function(String uid)? rejectOwner,
+    TResult Function()? fetchProperty,
+    TResult Function(String id)? approveProperty,
+    TResult Function(String id)? rejectProperty,
     required TResult orElse(),
   }) {
-    if (approveOwner != null) {
-      return approveOwner(uid);
+    if (approveProperty != null) {
+      return approveProperty(id);
     }
     return orElse();
   }
@@ -296,78 +298,78 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FetchOwners value) fetchOwners,
-    required TResult Function(_ApproveOwner value) approveOwner,
-    required TResult Function(_RejectOwner value) rejectOwner,
+    required TResult Function(_FetchProperty value) fetchProperty,
+    required TResult Function(_ApproveProperty value) approveProperty,
+    required TResult Function(_RejectProperty value) rejectProperty,
   }) {
-    return approveOwner(this);
+    return approveProperty(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_FetchOwners value)? fetchOwners,
-    TResult? Function(_ApproveOwner value)? approveOwner,
-    TResult? Function(_RejectOwner value)? rejectOwner,
+    TResult? Function(_FetchProperty value)? fetchProperty,
+    TResult? Function(_ApproveProperty value)? approveProperty,
+    TResult? Function(_RejectProperty value)? rejectProperty,
   }) {
-    return approveOwner?.call(this);
+    return approveProperty?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FetchOwners value)? fetchOwners,
-    TResult Function(_ApproveOwner value)? approveOwner,
-    TResult Function(_RejectOwner value)? rejectOwner,
+    TResult Function(_FetchProperty value)? fetchProperty,
+    TResult Function(_ApproveProperty value)? approveProperty,
+    TResult Function(_RejectProperty value)? rejectProperty,
     required TResult orElse(),
   }) {
-    if (approveOwner != null) {
-      return approveOwner(this);
+    if (approveProperty != null) {
+      return approveProperty(this);
     }
     return orElse();
   }
 }
 
-abstract class _ApproveOwner implements OwnerRequestEvent {
-  const factory _ApproveOwner(final String uid) = _$ApproveOwnerImpl;
+abstract class _ApproveProperty implements PropertyRequestEvent {
+  const factory _ApproveProperty(final String id) = _$ApprovePropertyImpl;
 
-  String get uid;
+  String get id;
 
-  /// Create a copy of OwnerRequestEvent
+  /// Create a copy of PropertyRequestEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ApproveOwnerImplCopyWith<_$ApproveOwnerImpl> get copyWith =>
+  _$$ApprovePropertyImplCopyWith<_$ApprovePropertyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RejectOwnerImplCopyWith<$Res> {
-  factory _$$RejectOwnerImplCopyWith(
-          _$RejectOwnerImpl value, $Res Function(_$RejectOwnerImpl) then) =
-      __$$RejectOwnerImplCopyWithImpl<$Res>;
+abstract class _$$RejectPropertyImplCopyWith<$Res> {
+  factory _$$RejectPropertyImplCopyWith(_$RejectPropertyImpl value,
+          $Res Function(_$RejectPropertyImpl) then) =
+      __$$RejectPropertyImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String uid});
+  $Res call({String id});
 }
 
 /// @nodoc
-class __$$RejectOwnerImplCopyWithImpl<$Res>
-    extends _$OwnerRequestEventCopyWithImpl<$Res, _$RejectOwnerImpl>
-    implements _$$RejectOwnerImplCopyWith<$Res> {
-  __$$RejectOwnerImplCopyWithImpl(
-      _$RejectOwnerImpl _value, $Res Function(_$RejectOwnerImpl) _then)
+class __$$RejectPropertyImplCopyWithImpl<$Res>
+    extends _$PropertyRequestEventCopyWithImpl<$Res, _$RejectPropertyImpl>
+    implements _$$RejectPropertyImplCopyWith<$Res> {
+  __$$RejectPropertyImplCopyWithImpl(
+      _$RejectPropertyImpl _value, $Res Function(_$RejectPropertyImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of OwnerRequestEvent
+  /// Create a copy of PropertyRequestEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? uid = null,
+    Object? id = null,
   }) {
-    return _then(_$RejectOwnerImpl(
-      null == uid
-          ? _value.uid
-          : uid // ignore: cast_nullable_to_non_nullable
+    return _then(_$RejectPropertyImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -375,66 +377,67 @@ class __$$RejectOwnerImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RejectOwnerImpl implements _RejectOwner {
-  const _$RejectOwnerImpl(this.uid);
+class _$RejectPropertyImpl implements _RejectProperty {
+  const _$RejectPropertyImpl(this.id);
 
   @override
-  final String uid;
+  final String id;
 
   @override
   String toString() {
-    return 'OwnerRequestEvent.rejectOwner(uid: $uid)';
+    return 'PropertyRequestEvent.rejectProperty(id: $id)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RejectOwnerImpl &&
-            (identical(other.uid, uid) || other.uid == uid));
+            other is _$RejectPropertyImpl &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, uid);
+  int get hashCode => Object.hash(runtimeType, id);
 
-  /// Create a copy of OwnerRequestEvent
+  /// Create a copy of PropertyRequestEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$RejectOwnerImplCopyWith<_$RejectOwnerImpl> get copyWith =>
-      __$$RejectOwnerImplCopyWithImpl<_$RejectOwnerImpl>(this, _$identity);
+  _$$RejectPropertyImplCopyWith<_$RejectPropertyImpl> get copyWith =>
+      __$$RejectPropertyImplCopyWithImpl<_$RejectPropertyImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() fetchOwners,
-    required TResult Function(String uid) approveOwner,
-    required TResult Function(String uid) rejectOwner,
+    required TResult Function() fetchProperty,
+    required TResult Function(String id) approveProperty,
+    required TResult Function(String id) rejectProperty,
   }) {
-    return rejectOwner(uid);
+    return rejectProperty(id);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? fetchOwners,
-    TResult? Function(String uid)? approveOwner,
-    TResult? Function(String uid)? rejectOwner,
+    TResult? Function()? fetchProperty,
+    TResult? Function(String id)? approveProperty,
+    TResult? Function(String id)? rejectProperty,
   }) {
-    return rejectOwner?.call(uid);
+    return rejectProperty?.call(id);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? fetchOwners,
-    TResult Function(String uid)? approveOwner,
-    TResult Function(String uid)? rejectOwner,
+    TResult Function()? fetchProperty,
+    TResult Function(String id)? approveProperty,
+    TResult Function(String id)? rejectProperty,
     required TResult orElse(),
   }) {
-    if (rejectOwner != null) {
-      return rejectOwner(uid);
+    if (rejectProperty != null) {
+      return rejectProperty(id);
     }
     return orElse();
   }
@@ -442,57 +445,57 @@ class _$RejectOwnerImpl implements _RejectOwner {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_FetchOwners value) fetchOwners,
-    required TResult Function(_ApproveOwner value) approveOwner,
-    required TResult Function(_RejectOwner value) rejectOwner,
+    required TResult Function(_FetchProperty value) fetchProperty,
+    required TResult Function(_ApproveProperty value) approveProperty,
+    required TResult Function(_RejectProperty value) rejectProperty,
   }) {
-    return rejectOwner(this);
+    return rejectProperty(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_FetchOwners value)? fetchOwners,
-    TResult? Function(_ApproveOwner value)? approveOwner,
-    TResult? Function(_RejectOwner value)? rejectOwner,
+    TResult? Function(_FetchProperty value)? fetchProperty,
+    TResult? Function(_ApproveProperty value)? approveProperty,
+    TResult? Function(_RejectProperty value)? rejectProperty,
   }) {
-    return rejectOwner?.call(this);
+    return rejectProperty?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_FetchOwners value)? fetchOwners,
-    TResult Function(_ApproveOwner value)? approveOwner,
-    TResult Function(_RejectOwner value)? rejectOwner,
+    TResult Function(_FetchProperty value)? fetchProperty,
+    TResult Function(_ApproveProperty value)? approveProperty,
+    TResult Function(_RejectProperty value)? rejectProperty,
     required TResult orElse(),
   }) {
-    if (rejectOwner != null) {
-      return rejectOwner(this);
+    if (rejectProperty != null) {
+      return rejectProperty(this);
     }
     return orElse();
   }
 }
 
-abstract class _RejectOwner implements OwnerRequestEvent {
-  const factory _RejectOwner(final String uid) = _$RejectOwnerImpl;
+abstract class _RejectProperty implements PropertyRequestEvent {
+  const factory _RejectProperty(final String id) = _$RejectPropertyImpl;
 
-  String get uid;
+  String get id;
 
-  /// Create a copy of OwnerRequestEvent
+  /// Create a copy of PropertyRequestEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RejectOwnerImplCopyWith<_$RejectOwnerImpl> get copyWith =>
+  _$$RejectPropertyImplCopyWith<_$RejectPropertyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$OwnerRequestState {
+mixin _$PropertyRequestState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<RequestOwnerModel> ownersList) success,
+    required TResult Function(List<RequestPropertyModel> propertyList) success,
     required TResult Function(String error) error,
     required TResult Function() requestedAccepted,
     required TResult Function() requestedRejected,
@@ -502,7 +505,7 @@ mixin _$OwnerRequestState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<RequestOwnerModel> ownersList)? success,
+    TResult? Function(List<RequestPropertyModel> propertyList)? success,
     TResult? Function(String error)? error,
     TResult? Function()? requestedAccepted,
     TResult? Function()? requestedRejected,
@@ -512,7 +515,7 @@ mixin _$OwnerRequestState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<RequestOwnerModel> ownersList)? success,
+    TResult Function(List<RequestPropertyModel> propertyList)? success,
     TResult Function(String error)? error,
     TResult Function()? requestedAccepted,
     TResult Function()? requestedRejected,
@@ -553,23 +556,24 @@ mixin _$OwnerRequestState {
 }
 
 /// @nodoc
-abstract class $OwnerRequestStateCopyWith<$Res> {
-  factory $OwnerRequestStateCopyWith(
-          OwnerRequestState value, $Res Function(OwnerRequestState) then) =
-      _$OwnerRequestStateCopyWithImpl<$Res, OwnerRequestState>;
+abstract class $PropertyRequestStateCopyWith<$Res> {
+  factory $PropertyRequestStateCopyWith(PropertyRequestState value,
+          $Res Function(PropertyRequestState) then) =
+      _$PropertyRequestStateCopyWithImpl<$Res, PropertyRequestState>;
 }
 
 /// @nodoc
-class _$OwnerRequestStateCopyWithImpl<$Res, $Val extends OwnerRequestState>
-    implements $OwnerRequestStateCopyWith<$Res> {
-  _$OwnerRequestStateCopyWithImpl(this._value, this._then);
+class _$PropertyRequestStateCopyWithImpl<$Res,
+        $Val extends PropertyRequestState>
+    implements $PropertyRequestStateCopyWith<$Res> {
+  _$PropertyRequestStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of OwnerRequestState
+  /// Create a copy of PropertyRequestState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -582,13 +586,13 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$OwnerRequestStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$PropertyRequestStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of OwnerRequestState
+  /// Create a copy of PropertyRequestState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -599,7 +603,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'OwnerRequestState.initial()';
+    return 'PropertyRequestState.initial()';
   }
 
   @override
@@ -616,7 +620,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<RequestOwnerModel> ownersList) success,
+    required TResult Function(List<RequestPropertyModel> propertyList) success,
     required TResult Function(String error) error,
     required TResult Function() requestedAccepted,
     required TResult Function() requestedRejected,
@@ -629,7 +633,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<RequestOwnerModel> ownersList)? success,
+    TResult? Function(List<RequestPropertyModel> propertyList)? success,
     TResult? Function(String error)? error,
     TResult? Function()? requestedAccepted,
     TResult? Function()? requestedRejected,
@@ -642,7 +646,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<RequestOwnerModel> ownersList)? success,
+    TResult Function(List<RequestPropertyModel> propertyList)? success,
     TResult Function(String error)? error,
     TResult Function()? requestedAccepted,
     TResult Function()? requestedRejected,
@@ -698,7 +702,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements OwnerRequestState {
+abstract class _Initial implements PropertyRequestState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -711,13 +715,13 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$OwnerRequestStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$PropertyRequestStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of OwnerRequestState
+  /// Create a copy of PropertyRequestState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -728,7 +732,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'OwnerRequestState.loading()';
+    return 'PropertyRequestState.loading()';
   }
 
   @override
@@ -745,7 +749,7 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<RequestOwnerModel> ownersList) success,
+    required TResult Function(List<RequestPropertyModel> propertyList) success,
     required TResult Function(String error) error,
     required TResult Function() requestedAccepted,
     required TResult Function() requestedRejected,
@@ -758,7 +762,7 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<RequestOwnerModel> ownersList)? success,
+    TResult? Function(List<RequestPropertyModel> propertyList)? success,
     TResult? Function(String error)? error,
     TResult? Function()? requestedAccepted,
     TResult? Function()? requestedRejected,
@@ -771,7 +775,7 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<RequestOwnerModel> ownersList)? success,
+    TResult Function(List<RequestPropertyModel> propertyList)? success,
     TResult Function(String error)? error,
     TResult Function()? requestedAccepted,
     TResult Function()? requestedRejected,
@@ -827,7 +831,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements OwnerRequestState {
+abstract class _Loading implements PropertyRequestState {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -837,29 +841,29 @@ abstract class _$$SuccessImplCopyWith<$Res> {
           _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<RequestOwnerModel> ownersList});
+  $Res call({List<RequestPropertyModel> propertyList});
 }
 
 /// @nodoc
 class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$OwnerRequestStateCopyWithImpl<$Res, _$SuccessImpl>
+    extends _$PropertyRequestStateCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
   __$$SuccessImplCopyWithImpl(
       _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of OwnerRequestState
+  /// Create a copy of PropertyRequestState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ownersList = null,
+    Object? propertyList = null,
   }) {
     return _then(_$SuccessImpl(
-      null == ownersList
-          ? _value._ownersList
-          : ownersList // ignore: cast_nullable_to_non_nullable
-              as List<RequestOwnerModel>,
+      null == propertyList
+          ? _value._propertyList
+          : propertyList // ignore: cast_nullable_to_non_nullable
+              as List<RequestPropertyModel>,
     ));
   }
 }
@@ -867,20 +871,20 @@ class __$$SuccessImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SuccessImpl implements _Success {
-  const _$SuccessImpl(final List<RequestOwnerModel> ownersList)
-      : _ownersList = ownersList;
+  const _$SuccessImpl(final List<RequestPropertyModel> propertyList)
+      : _propertyList = propertyList;
 
-  final List<RequestOwnerModel> _ownersList;
+  final List<RequestPropertyModel> _propertyList;
   @override
-  List<RequestOwnerModel> get ownersList {
-    if (_ownersList is EqualUnmodifiableListView) return _ownersList;
+  List<RequestPropertyModel> get propertyList {
+    if (_propertyList is EqualUnmodifiableListView) return _propertyList;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_ownersList);
+    return EqualUnmodifiableListView(_propertyList);
   }
 
   @override
   String toString() {
-    return 'OwnerRequestState.success(ownersList: $ownersList)';
+    return 'PropertyRequestState.success(propertyList: $propertyList)';
   }
 
   @override
@@ -889,14 +893,14 @@ class _$SuccessImpl implements _Success {
         (other.runtimeType == runtimeType &&
             other is _$SuccessImpl &&
             const DeepCollectionEquality()
-                .equals(other._ownersList, _ownersList));
+                .equals(other._propertyList, _propertyList));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_ownersList));
+      runtimeType, const DeepCollectionEquality().hash(_propertyList));
 
-  /// Create a copy of OwnerRequestState
+  /// Create a copy of PropertyRequestState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -909,12 +913,12 @@ class _$SuccessImpl implements _Success {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<RequestOwnerModel> ownersList) success,
+    required TResult Function(List<RequestPropertyModel> propertyList) success,
     required TResult Function(String error) error,
     required TResult Function() requestedAccepted,
     required TResult Function() requestedRejected,
   }) {
-    return success(ownersList);
+    return success(propertyList);
   }
 
   @override
@@ -922,12 +926,12 @@ class _$SuccessImpl implements _Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<RequestOwnerModel> ownersList)? success,
+    TResult? Function(List<RequestPropertyModel> propertyList)? success,
     TResult? Function(String error)? error,
     TResult? Function()? requestedAccepted,
     TResult? Function()? requestedRejected,
   }) {
-    return success?.call(ownersList);
+    return success?.call(propertyList);
   }
 
   @override
@@ -935,14 +939,14 @@ class _$SuccessImpl implements _Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<RequestOwnerModel> ownersList)? success,
+    TResult Function(List<RequestPropertyModel> propertyList)? success,
     TResult Function(String error)? error,
     TResult Function()? requestedAccepted,
     TResult Function()? requestedRejected,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(ownersList);
+      return success(propertyList);
     }
     return orElse();
   }
@@ -991,13 +995,13 @@ class _$SuccessImpl implements _Success {
   }
 }
 
-abstract class _Success implements OwnerRequestState {
-  const factory _Success(final List<RequestOwnerModel> ownersList) =
+abstract class _Success implements PropertyRequestState {
+  const factory _Success(final List<RequestPropertyModel> propertyList) =
       _$SuccessImpl;
 
-  List<RequestOwnerModel> get ownersList;
+  List<RequestPropertyModel> get propertyList;
 
-  /// Create a copy of OwnerRequestState
+  /// Create a copy of PropertyRequestState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
@@ -1015,13 +1019,13 @@ abstract class _$$ErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$OwnerRequestStateCopyWithImpl<$Res, _$ErrorImpl>
+    extends _$PropertyRequestStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
   __$$ErrorImplCopyWithImpl(
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of OwnerRequestState
+  /// Create a copy of PropertyRequestState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -1047,7 +1051,7 @@ class _$ErrorImpl implements _Error {
 
   @override
   String toString() {
-    return 'OwnerRequestState.error(error: $error)';
+    return 'PropertyRequestState.error(error: $error)';
   }
 
   @override
@@ -1061,7 +1065,7 @@ class _$ErrorImpl implements _Error {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of OwnerRequestState
+  /// Create a copy of PropertyRequestState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -1074,7 +1078,7 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<RequestOwnerModel> ownersList) success,
+    required TResult Function(List<RequestPropertyModel> propertyList) success,
     required TResult Function(String error) error,
     required TResult Function() requestedAccepted,
     required TResult Function() requestedRejected,
@@ -1087,7 +1091,7 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<RequestOwnerModel> ownersList)? success,
+    TResult? Function(List<RequestPropertyModel> propertyList)? success,
     TResult? Function(String error)? error,
     TResult? Function()? requestedAccepted,
     TResult? Function()? requestedRejected,
@@ -1100,7 +1104,7 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<RequestOwnerModel> ownersList)? success,
+    TResult Function(List<RequestPropertyModel> propertyList)? success,
     TResult Function(String error)? error,
     TResult Function()? requestedAccepted,
     TResult Function()? requestedRejected,
@@ -1156,12 +1160,12 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements OwnerRequestState {
+abstract class _Error implements PropertyRequestState {
   const factory _Error(final String error) = _$ErrorImpl;
 
   String get error;
 
-  /// Create a copy of OwnerRequestState
+  /// Create a copy of PropertyRequestState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -1177,13 +1181,13 @@ abstract class _$$RequestedAcceptedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$RequestedAcceptedImplCopyWithImpl<$Res>
-    extends _$OwnerRequestStateCopyWithImpl<$Res, _$RequestedAcceptedImpl>
+    extends _$PropertyRequestStateCopyWithImpl<$Res, _$RequestedAcceptedImpl>
     implements _$$RequestedAcceptedImplCopyWith<$Res> {
   __$$RequestedAcceptedImplCopyWithImpl(_$RequestedAcceptedImpl _value,
       $Res Function(_$RequestedAcceptedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of OwnerRequestState
+  /// Create a copy of PropertyRequestState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -1194,7 +1198,7 @@ class _$RequestedAcceptedImpl implements _RequestedAccepted {
 
   @override
   String toString() {
-    return 'OwnerRequestState.requestedAccepted()';
+    return 'PropertyRequestState.requestedAccepted()';
   }
 
   @override
@@ -1211,7 +1215,7 @@ class _$RequestedAcceptedImpl implements _RequestedAccepted {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<RequestOwnerModel> ownersList) success,
+    required TResult Function(List<RequestPropertyModel> propertyList) success,
     required TResult Function(String error) error,
     required TResult Function() requestedAccepted,
     required TResult Function() requestedRejected,
@@ -1224,7 +1228,7 @@ class _$RequestedAcceptedImpl implements _RequestedAccepted {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<RequestOwnerModel> ownersList)? success,
+    TResult? Function(List<RequestPropertyModel> propertyList)? success,
     TResult? Function(String error)? error,
     TResult? Function()? requestedAccepted,
     TResult? Function()? requestedRejected,
@@ -1237,7 +1241,7 @@ class _$RequestedAcceptedImpl implements _RequestedAccepted {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<RequestOwnerModel> ownersList)? success,
+    TResult Function(List<RequestPropertyModel> propertyList)? success,
     TResult Function(String error)? error,
     TResult Function()? requestedAccepted,
     TResult Function()? requestedRejected,
@@ -1293,7 +1297,7 @@ class _$RequestedAcceptedImpl implements _RequestedAccepted {
   }
 }
 
-abstract class _RequestedAccepted implements OwnerRequestState {
+abstract class _RequestedAccepted implements PropertyRequestState {
   const factory _RequestedAccepted() = _$RequestedAcceptedImpl;
 }
 
@@ -1306,13 +1310,13 @@ abstract class _$$RequestedRejectedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$RequestedRejectedImplCopyWithImpl<$Res>
-    extends _$OwnerRequestStateCopyWithImpl<$Res, _$RequestedRejectedImpl>
+    extends _$PropertyRequestStateCopyWithImpl<$Res, _$RequestedRejectedImpl>
     implements _$$RequestedRejectedImplCopyWith<$Res> {
   __$$RequestedRejectedImplCopyWithImpl(_$RequestedRejectedImpl _value,
       $Res Function(_$RequestedRejectedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of OwnerRequestState
+  /// Create a copy of PropertyRequestState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -1323,7 +1327,7 @@ class _$RequestedRejectedImpl implements _RequestedRejected {
 
   @override
   String toString() {
-    return 'OwnerRequestState.requestedRejected()';
+    return 'PropertyRequestState.requestedRejected()';
   }
 
   @override
@@ -1340,7 +1344,7 @@ class _$RequestedRejectedImpl implements _RequestedRejected {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<RequestOwnerModel> ownersList) success,
+    required TResult Function(List<RequestPropertyModel> propertyList) success,
     required TResult Function(String error) error,
     required TResult Function() requestedAccepted,
     required TResult Function() requestedRejected,
@@ -1353,7 +1357,7 @@ class _$RequestedRejectedImpl implements _RequestedRejected {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<RequestOwnerModel> ownersList)? success,
+    TResult? Function(List<RequestPropertyModel> propertyList)? success,
     TResult? Function(String error)? error,
     TResult? Function()? requestedAccepted,
     TResult? Function()? requestedRejected,
@@ -1366,7 +1370,7 @@ class _$RequestedRejectedImpl implements _RequestedRejected {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<RequestOwnerModel> ownersList)? success,
+    TResult Function(List<RequestPropertyModel> propertyList)? success,
     TResult Function(String error)? error,
     TResult Function()? requestedAccepted,
     TResult Function()? requestedRejected,
@@ -1422,6 +1426,6 @@ class _$RequestedRejectedImpl implements _RequestedRejected {
   }
 }
 
-abstract class _RequestedRejected implements OwnerRequestState {
+abstract class _RequestedRejected implements PropertyRequestState {
   const factory _RequestedRejected() = _$RequestedRejectedImpl;
 }

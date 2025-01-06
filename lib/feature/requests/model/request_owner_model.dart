@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart';
 
 import 'package:admin_resort_booking_app/feature/requests/model/document_model.dart';
 
-class OwnerModel {
+class RequestOwnerModel {
   final String uid;
   final String ownerId;
   final String name;
@@ -13,7 +13,7 @@ class OwnerModel {
   final bool isVerified;
   final String? profilePicture;
   final List<DocumentModel> personalProof;
-  OwnerModel({
+  RequestOwnerModel({
     required this.uid,
     required this.ownerId,
     required this.name,
@@ -23,7 +23,7 @@ class OwnerModel {
     required this.personalProof,
   });
 
-  OwnerModel copyWith({
+  RequestOwnerModel copyWith({
     String? uid,
     String? ownerId,
     String? name,
@@ -32,7 +32,7 @@ class OwnerModel {
     String? profilePicture,
     List<DocumentModel>? personalProof,
   }) {
-    return OwnerModel(
+    return RequestOwnerModel(
       uid: uid ?? this.uid,
       ownerId: ownerId ?? this.ownerId,
       name: name ?? this.name,
@@ -55,8 +55,8 @@ class OwnerModel {
     };
   }
 
-  factory OwnerModel.fromMap(Map<String, dynamic> map) {
-    return OwnerModel(
+  factory RequestOwnerModel.fromMap(Map<String, dynamic> map) {
+    return RequestOwnerModel(
       uid: map['uid'] as String,
       ownerId: map['ownerId'] as String,
       name: map['name'] as String,
@@ -75,16 +75,16 @@ class OwnerModel {
 
   String toJson() => json.encode(toMap());
 
-  factory OwnerModel.fromJson(String source) =>
-      OwnerModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory RequestOwnerModel.fromJson(String source) =>
+      RequestOwnerModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
-    return 'OwnerModel(uid: $uid, ownerId: $ownerId, name: $name, email: $email, isVerified: $isVerified, profilePicture: $profilePicture, personalProof: $personalProof)';
+    return 'RequestOwnerModel(uid: $uid, ownerId: $ownerId, name: $name, email: $email, isVerified: $isVerified, profilePicture: $profilePicture, personalProof: $personalProof)';
   }
 
   @override
-  bool operator ==(covariant OwnerModel other) {
+  bool operator ==(covariant RequestOwnerModel other) {
     if (identical(this, other)) return true;
 
     return other.uid == uid &&

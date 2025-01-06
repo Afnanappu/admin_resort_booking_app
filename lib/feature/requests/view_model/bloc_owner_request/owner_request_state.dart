@@ -4,7 +4,7 @@ part of 'owner_request_bloc.dart';
 class OwnerRequestState with _$OwnerRequestState {
   const factory OwnerRequestState.initial() = _Initial;
   const factory OwnerRequestState.loading() = _Loading;
-  const factory OwnerRequestState.success(List<OwnerModel> ownersList) =
+  const factory OwnerRequestState.success(List<RequestOwnerModel> ownersList) =
       _Success;
   const factory OwnerRequestState.error(String error) = _Error;
   const factory OwnerRequestState.requestedAccepted() = _RequestedAccepted;

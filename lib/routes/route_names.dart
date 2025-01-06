@@ -1,6 +1,7 @@
 class AppRoutes {
   static const request = 'request';
   static const requestOwnerDetails = 'request-owner-details';
+  static const requestPropertyDetails = 'request-property-details';
   static const dashboard = 'dashboard';
   static const home = 'home';
   static const ownerManagement = 'owner-management';

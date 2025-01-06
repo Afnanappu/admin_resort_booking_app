@@ -1,4 +1,4 @@
-import 'package:admin_resort_booking_app/feature/requests/model/owner_model.dart';
+import 'package:admin_resort_booking_app/feature/requests/model/request_owner_model.dart';
 import 'package:admin_resort_booking_app/feature/requests/repository/owner_request_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

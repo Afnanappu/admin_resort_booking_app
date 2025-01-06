@@ -1,19 +1,12 @@
-import 'package:admin_resort_booking_app/feature/requests/view_model/bloc_owner_request/owner_request_bloc.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/screens/tab_bar_view_owner_request.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/screens/tab_bar_view_property_request.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RequestPage extends StatelessWidget {
   const RequestPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback(
-      (_) {
-        context.read<OwnerRequestBloc>().add(OwnerRequestEvent.fetchOwners());
-      },
-    );
     return DefaultTabController(
       length: 2,
       child: Column(
@@ -34,7 +27,7 @@ class RequestPage extends StatelessWidget {
               ],
             ),
           ),
-          const Expanded(
+          Expanded(
             child: TabBarView(
               children: [
                 ScreenOwnerRequest(),

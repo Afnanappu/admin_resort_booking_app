@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:admin_resort_booking_app/core/models/picked_file_model.dart';
+import 'package:admin_resort_booking_app/core/data/models/picked_file_model.dart';
 import 'package:file_picker/file_picker.dart';
 
 Future<PickedFileModel?> pickFileFromDevice({bool allowPdf = false}) async {

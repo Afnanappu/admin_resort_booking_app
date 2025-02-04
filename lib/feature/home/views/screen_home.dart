@@ -20,7 +20,6 @@ class HomeWithSideRail extends StatelessWidget {
             onDestinationSelected: (index) {
               navigationShell.goBranch(
                 index,
-                initialLocation: index == navigationShell.currentIndex,
               );
             },
             destinations: const [

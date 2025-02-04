@@ -4,14 +4,14 @@ import 'package:admin_resort_booking_app/feature/additional_options/views/screen
 import 'package:admin_resort_booking_app/feature/dashboard/views/screen_dashboard.dart';
 import 'package:admin_resort_booking_app/feature/home/views/screen_home.dart';
 import 'package:admin_resort_booking_app/feature/issue_posting/views/screen_issue_posting.dart';
-import 'package:admin_resort_booking_app/feature/owner_management/views/screen_owner_management.dart';
+import 'package:admin_resort_booking_app/feature/owner_management/views/screens/screen_owner_management.dart';
 import 'package:admin_resort_booking_app/feature/push_notification/views/screen_push_notification.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/screens/image_viewer.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/screens/screen_owner_request_details.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/screens/screen_property_request_details.dart';
 import 'package:admin_resort_booking_app/feature/requests/views/screens/screen_requests.dart';
 import 'package:admin_resort_booking_app/feature/revenue_management/views/screen_revenue_management.dart';
-import 'package:admin_resort_booking_app/feature/user_management/views/screen_user_management.dart';
+import 'package:admin_resort_booking_app/feature/user_management/views/screens/screen_user_management.dart';
 import 'package:admin_resort_booking_app/routes/custom_route_transition.dart';
 import 'package:admin_resort_booking_app/routes/route_names.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +44,7 @@ final routes = GoRouter(
               pageBuilder: (context, state) {
                 return customTransitionPage(
                   state,
-                  const DashboardPage(),
+                   DashboardPage(),
                 );
               },
             ),

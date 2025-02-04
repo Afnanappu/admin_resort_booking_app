@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'package:admin_resort_booking_app/core/constants/my_colors.dart';
 import 'package:admin_resort_booking_app/core/constants/spaces.dart';
-import 'package:admin_resort_booking_app/core/models/picked_file_model.dart';
+import 'package:admin_resort_booking_app/core/data/models/picked_file_model.dart';
 import 'package:admin_resort_booking_app/core/utils/app_file_picker.dart';
 import 'package:admin_resort_booking_app/core/utils/screen_size.dart';
 import 'package:admin_resort_booking_app/feature/additional_options/models/additional_option_tile_model.dart';

@@ -26,7 +26,7 @@ class ElevatedButtonForAddOptions extends StatelessWidget {
       ),
       child: Text(
         'Add New $title',
-        style: MyTextStyles.bodyLargeMediumWhite,
+        style: MyTextStyles.bodyLargeNormalWhite,
       ),
     );
   }

@@ -7,16 +7,26 @@ class MyTextStyles {
     fontSize: 16,
     fontWeight: FontWeight.w400,
   );
-  static final bodyLargeMediumWhite = TextStyle(
-    color: MyColors.white,
-    fontSize: 16,
-    fontWeight: FontWeight.w500,
-  );
 
   static final bodyLargeMediumBlack = TextStyle(
     color: MyColors.black,
     fontSize: 16,
     fontWeight: FontWeight.w500,
+  );
+  static final bodyLargeBoldBlack = TextStyle(
+    color: MyColors.black,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+  );
+  static final bodyLargeNormalGrey = TextStyle(
+    color: MyColors.grey,
+    fontSize: 15,
+    fontWeight: FontWeight.normal,
+  );
+  static final bodyExtraLargeBoldBlack = TextStyle(
+    color: MyColors.black,
+    fontSize: 17,
+    fontWeight: FontWeight.bold,
   );
   static final headlineSmallSemiBoldBlack = TextStyle(
     color: MyColors.black,
@@ -38,11 +48,6 @@ class MyTextStyles {
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
-  static final titleMediumMediumWhite = TextStyle(
-    color: MyColors.white,
-    fontSize: 18,
-    fontWeight: FontWeight.w500,
-  );
   static final titleSmallSemiBoldBlack = TextStyle(
     color: MyColors.black,
     fontSize: 16,
@@ -53,10 +58,30 @@ class MyTextStyles {
     fontSize: 14,
     color: MyColors.greyLight,
   );
+  static final bodySmallMediumGrey = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
+    color: MyColors.grey,
+  );
+  static final bodySmallRegularGrey = TextStyle(
+    fontWeight: FontWeight.normal,
+    fontSize: 14,
+    color: MyColors.grey,
+  );
   static final bodySmallMediumBlack = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 14,
     color: MyColors.black,
+  );
+  static final bodySmallNormalBlack = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 14,
+    color: MyColors.black,
+  );
+  static final bodySmallMediumBlue = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    color: MyColors.blue,
   );
   static final textFieldNormalGreyLight = TextStyle(
     color: MyColors.grey,
@@ -69,40 +94,29 @@ class MyTextStyles {
     fontSize: 13,
   );
 
-  static const TextStyle titleLargeBoldBlack = TextStyle(
-    fontSize: 24,
+  //=======================
+
+  static const TextStyle nameStyle = TextStyle(
+    fontSize: 22,
     fontWeight: FontWeight.bold,
-    color: Colors.black,
+    color: MyColors.black,
   );
 
-  // static const TextStyle titleMediumSemiBoldBlack = TextStyle(
-  //   fontSize: 20,
-  //   fontWeight: FontWeight.w600,
-  //   color: Colors.black,
-  // );
-
-  static const TextStyle titleSmallRegularGrey = TextStyle(
+  static const TextStyle locationStyle = TextStyle(
     fontSize: 16,
-    fontWeight: FontWeight.normal,
-    color: Colors.grey,
+    fontWeight: FontWeight.w400,
+    color: MyColors.grey,
   );
 
-  // Body Styles
-  static const TextStyle bodySmallRegularGrey = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.normal,
-    color: Colors.grey,
-  );
-
-  static const TextStyle bodyMediumRegularBlack = TextStyle(
+  static const TextStyle typeStyle = TextStyle(
     fontSize: 16,
-    fontWeight: FontWeight.normal,
-    color: Colors.black,
+    fontWeight: FontWeight.w500,
+    color: MyColors.grey,
   );
 
-  static const TextStyle bodyLargeSemiBoldBlack = TextStyle(
+  static const TextStyle ratingStyle = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
-    color: Colors.black,
+    color: MyColors.black, // Or a color matching your theme
   );
 }

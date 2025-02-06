@@ -1,5 +1,4 @@
 import 'package:admin_resort_booking_app/core/data/models/property_card_model.dart';
-import 'package:admin_resort_booking_app/core/data/models/property_model.dart';
 import 'package:admin_resort_booking_app/feature/owner_management/repository/property_home_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

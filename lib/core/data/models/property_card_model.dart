@@ -66,7 +66,7 @@ class PropertyCardModel {
       location: LocationModel.fromMap(map['location'] as Map<String, dynamic>),
       price: (map['roomPrice'] as num).toDouble(),
       reviews: List<ReviewModel>.from(
-        (map['reviews'] ?? []).map<ReviewModel>(
+        (map['reviews'] ?? []).map<ReviewModel>(  
           (x) => ReviewModel.fromMap(x as Map<String, dynamic>),
         ),
       ),

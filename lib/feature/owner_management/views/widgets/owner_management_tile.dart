@@ -5,10 +5,8 @@ import 'package:admin_resort_booking_app/core/data/models/owner_model.dart';
 import 'package:admin_resort_booking_app/core/utils/custom_date_formats.dart';
 import 'package:admin_resort_booking_app/feature/owner_management/view_model/cubit/cubit_owner_management/owner_management_cubit.dart';
 import 'package:admin_resort_booking_app/feature/owner_management/views/screens/screen_owner_details.dart';
-import 'package:admin_resort_booking_app/routes/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class OwnerManagementTile extends StatelessWidget {
   final OwnerModel owner;

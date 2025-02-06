@@ -1,3 +1,8 @@
+import 'package:admin_resort_booking_app/feature/dashboard/repository/dashboard_repository.dart';
+import 'package:admin_resort_booking_app/feature/dashboard/services/dashboard_services.dart';
+import 'package:admin_resort_booking_app/feature/dashboard/view_model/bloc_dashboard/dashboard_bloc.dart';
+import 'package:admin_resort_booking_app/feature/issue_posting/services.dart/report_issue_services.dart';
+import 'package:admin_resort_booking_app/feature/issue_posting/view_model/cubit/cubit_report_issue/report_issue_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -115,6 +120,11 @@ class ResortAdminApp extends StatelessWidget {
           ),
         ),
         RepositoryProvider(
+          create: (context) => DashboardRepository(
+            DashboardServices(),
+          ),
+        ),
+        RepositoryProvider(
           create: (context) => ReviewRepository(
             ReviewServices(),
           ),
@@ -173,6 +183,15 @@ class ResortAdminApp extends StatelessWidget {
           BlocProvider(
             create: (context) =>
                 OwnerManagementCubit(context.read<OwnerRepository>()),
+          ),
+          BlocProvider(
+            create: (context) => ReportIssueCubit(
+              ReportIssueServices(),
+            ),
+          ),
+          BlocProvider(
+            create: (context) =>
+                DashboardBloc(context.read<DashboardRepository>()),
           ),
           BlocProvider(
             create: (context) => PropertyRequestDataCubit(),

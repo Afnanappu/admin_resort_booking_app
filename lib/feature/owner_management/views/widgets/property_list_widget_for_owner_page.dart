@@ -3,7 +3,6 @@ import 'package:admin_resort_booking_app/feature/owner_management/view_model/blo
 import 'package:admin_resort_booking_app/feature/owner_management/view_model/bloc/bloc_property_home_list/property_list_home_bloc.dart';
 import 'package:admin_resort_booking_app/feature/owner_management/views/components/property_widget.dart';
 import 'package:admin_resort_booking_app/feature/owner_management/views/screens/screen_home_property_details_.dart';
-import 'package:admin_resort_booking_app/feature/owner_management/views/screens/screen_owner_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,6 +1,5 @@
 import 'package:admin_resort_booking_app/core/utils/screen_size.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ScreenPropertyRequest extends StatelessWidget {
   const ScreenPropertyRequest({super.key});

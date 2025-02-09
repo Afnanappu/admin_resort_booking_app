@@ -22,7 +22,9 @@ mixin _$OwnerRequestEvent {
     required TResult Function(
             String uid, String ownerId, String email, String ownerName)
         approveOwner,
-    required TResult Function(String uid) rejectOwner,
+    required TResult Function(
+            String uid, String ownerId, String email, String ownerName)
+        rejectOwner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,7 +33,9 @@ mixin _$OwnerRequestEvent {
     TResult? Function(
             String uid, String ownerId, String email, String ownerName)?
         approveOwner,
-    TResult? Function(String uid)? rejectOwner,
+    TResult? Function(
+            String uid, String ownerId, String email, String ownerName)?
+        rejectOwner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +44,9 @@ mixin _$OwnerRequestEvent {
     TResult Function(
             String uid, String ownerId, String email, String ownerName)?
         approveOwner,
-    TResult Function(String uid)? rejectOwner,
+    TResult Function(
+            String uid, String ownerId, String email, String ownerName)?
+        rejectOwner,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,7 +140,9 @@ class _$FetchOwnersImpl implements _FetchOwners {
     required TResult Function(
             String uid, String ownerId, String email, String ownerName)
         approveOwner,
-    required TResult Function(String uid) rejectOwner,
+    required TResult Function(
+            String uid, String ownerId, String email, String ownerName)
+        rejectOwner,
   }) {
     return fetchOwners();
   }
@@ -146,7 +154,9 @@ class _$FetchOwnersImpl implements _FetchOwners {
     TResult? Function(
             String uid, String ownerId, String email, String ownerName)?
         approveOwner,
-    TResult? Function(String uid)? rejectOwner,
+    TResult? Function(
+            String uid, String ownerId, String email, String ownerName)?
+        rejectOwner,
   }) {
     return fetchOwners?.call();
   }
@@ -158,7 +168,9 @@ class _$FetchOwnersImpl implements _FetchOwners {
     TResult Function(
             String uid, String ownerId, String email, String ownerName)?
         approveOwner,
-    TResult Function(String uid)? rejectOwner,
+    TResult Function(
+            String uid, String ownerId, String email, String ownerName)?
+        rejectOwner,
     required TResult orElse(),
   }) {
     if (fetchOwners != null) {
@@ -307,7 +319,9 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
     required TResult Function(
             String uid, String ownerId, String email, String ownerName)
         approveOwner,
-    required TResult Function(String uid) rejectOwner,
+    required TResult Function(
+            String uid, String ownerId, String email, String ownerName)
+        rejectOwner,
   }) {
     return approveOwner(uid, ownerId, email, ownerName);
   }
@@ -319,7 +333,9 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
     TResult? Function(
             String uid, String ownerId, String email, String ownerName)?
         approveOwner,
-    TResult? Function(String uid)? rejectOwner,
+    TResult? Function(
+            String uid, String ownerId, String email, String ownerName)?
+        rejectOwner,
   }) {
     return approveOwner?.call(uid, ownerId, email, ownerName);
   }
@@ -331,7 +347,9 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
     TResult Function(
             String uid, String ownerId, String email, String ownerName)?
         approveOwner,
-    TResult Function(String uid)? rejectOwner,
+    TResult Function(
+            String uid, String ownerId, String email, String ownerName)?
+        rejectOwner,
     required TResult orElse(),
   }) {
     if (approveOwner != null) {
@@ -400,7 +418,7 @@ abstract class _$$RejectOwnerImplCopyWith<$Res> {
           _$RejectOwnerImpl value, $Res Function(_$RejectOwnerImpl) then) =
       __$$RejectOwnerImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String uid});
+  $Res call({String uid, String ownerId, String email, String ownerName});
 }
 
 /// @nodoc
@@ -417,11 +435,26 @@ class __$$RejectOwnerImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? uid = null,
+    Object? ownerId = null,
+    Object? email = null,
+    Object? ownerName = null,
   }) {
     return _then(_$RejectOwnerImpl(
-      null == uid
+      uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
+              as String,
+      ownerId: null == ownerId
+          ? _value.ownerId
+          : ownerId // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      ownerName: null == ownerName
+          ? _value.ownerName
+          : ownerName // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -430,14 +463,24 @@ class __$$RejectOwnerImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$RejectOwnerImpl implements _RejectOwner {
-  const _$RejectOwnerImpl(this.uid);
+  const _$RejectOwnerImpl(
+      {required this.uid,
+      required this.ownerId,
+      required this.email,
+      required this.ownerName});
 
   @override
   final String uid;
+  @override
+  final String ownerId;
+  @override
+  final String email;
+  @override
+  final String ownerName;
 
   @override
   String toString() {
-    return 'OwnerRequestEvent.rejectOwner(uid: $uid)';
+    return 'OwnerRequestEvent.rejectOwner(uid: $uid, ownerId: $ownerId, email: $email, ownerName: $ownerName)';
   }
 
   @override
@@ -445,11 +488,15 @@ class _$RejectOwnerImpl implements _RejectOwner {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RejectOwnerImpl &&
-            (identical(other.uid, uid) || other.uid == uid));
+            (identical(other.uid, uid) || other.uid == uid) &&
+            (identical(other.ownerId, ownerId) || other.ownerId == ownerId) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.ownerName, ownerName) ||
+                other.ownerName == ownerName));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, uid);
+  int get hashCode => Object.hash(runtimeType, uid, ownerId, email, ownerName);
 
   /// Create a copy of OwnerRequestEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -466,9 +513,11 @@ class _$RejectOwnerImpl implements _RejectOwner {
     required TResult Function(
             String uid, String ownerId, String email, String ownerName)
         approveOwner,
-    required TResult Function(String uid) rejectOwner,
+    required TResult Function(
+            String uid, String ownerId, String email, String ownerName)
+        rejectOwner,
   }) {
-    return rejectOwner(uid);
+    return rejectOwner(uid, ownerId, email, ownerName);
   }
 
   @override
@@ -478,9 +527,11 @@ class _$RejectOwnerImpl implements _RejectOwner {
     TResult? Function(
             String uid, String ownerId, String email, String ownerName)?
         approveOwner,
-    TResult? Function(String uid)? rejectOwner,
+    TResult? Function(
+            String uid, String ownerId, String email, String ownerName)?
+        rejectOwner,
   }) {
-    return rejectOwner?.call(uid);
+    return rejectOwner?.call(uid, ownerId, email, ownerName);
   }
 
   @override
@@ -490,11 +541,13 @@ class _$RejectOwnerImpl implements _RejectOwner {
     TResult Function(
             String uid, String ownerId, String email, String ownerName)?
         approveOwner,
-    TResult Function(String uid)? rejectOwner,
+    TResult Function(
+            String uid, String ownerId, String email, String ownerName)?
+        rejectOwner,
     required TResult orElse(),
   }) {
     if (rejectOwner != null) {
-      return rejectOwner(uid);
+      return rejectOwner(uid, ownerId, email, ownerName);
     }
     return orElse();
   }
@@ -535,9 +588,16 @@ class _$RejectOwnerImpl implements _RejectOwner {
 }
 
 abstract class _RejectOwner implements OwnerRequestEvent {
-  const factory _RejectOwner(final String uid) = _$RejectOwnerImpl;
+  const factory _RejectOwner(
+      {required final String uid,
+      required final String ownerId,
+      required final String email,
+      required final String ownerName}) = _$RejectOwnerImpl;
 
   String get uid;
+  String get ownerId;
+  String get email;
+  String get ownerName;
 
   /// Create a copy of OwnerRequestEvent
   /// with the given fields replaced by the non-null parameter values.

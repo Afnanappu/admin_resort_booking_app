@@ -34,15 +34,29 @@ class OwnerRequestRepository {
   }) async {
     try {
       await _service.approveOwnerRequest(
-          uid: uid, ownerId: ownerId, email: email, ownerName: ownerName);
+        uid: uid,
+        ownerId: ownerId,
+        email: email,
+        ownerName: ownerName,
+      );
     } catch (e) {
       rethrow;
     }
   }
 
-  Future<void> rejectOwnerRequest(String uid) async {
+  Future<void> rejectOwnerRequest({
+    required String uid,
+    required String ownerId,
+    required String email,
+    required String ownerName,
+  }) async {
     try {
-      await _service.rejectOwnerRequest(uid);
+      await _service.rejectOwnerRequest(
+        uid: uid,
+        ownerId: ownerId,
+        email: email,
+        ownerName: ownerName,
+      );
     } catch (e) {
       rethrow;
     }

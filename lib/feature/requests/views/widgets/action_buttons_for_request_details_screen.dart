@@ -69,7 +69,8 @@ class ActionButtonsForRequestDetailsScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 20, vertical: 12),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(borderRad10)),
+                      borderRadius: BorderRadius.circular(borderRad10),
+                    ),
                   ),
                   icon: const Icon(
                     Icons.check,
@@ -82,9 +83,14 @@ class ActionButtonsForRequestDetailsScreen extends StatelessWidget {
                 ),
                 OutlinedButton.icon(
                   onPressed: () {
-                    context
-                        .read<OwnerRequestBloc>()
-                        .add(OwnerRequestEvent.rejectOwner(uid));
+                    context.read<OwnerRequestBloc>().add(
+                          OwnerRequestEvent.rejectOwner(
+                            uid: uid,
+                            ownerId: ownerId,
+                            email: email,
+                            ownerName: name,
+                          ),
+                        );
                   },
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(

@@ -9,5 +9,10 @@ class OwnerRequestEvent with _$OwnerRequestEvent {
     required String email,
     required String ownerName,
   }) = _ApproveOwner;
-  const factory OwnerRequestEvent.rejectOwner(String uid) = _RejectOwner;
+  const factory OwnerRequestEvent.rejectOwner({
+    required String uid,
+    required String ownerId,
+    required String email,
+    required String ownerName,
+  }) = _RejectOwner;
 }

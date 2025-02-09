@@ -26,13 +26,20 @@ class OwnerRequestRepository {
     }
   }
 
-  Future<void> approveOwnerRequest(String uid) async {
+  Future<void> approveOwnerRequest({
+    required String uid,
+    required String ownerId,
+    required String email,
+    required String ownerName,
+  }) async {
     try {
-      await _service.approveOwnerRequest(uid);
+      await _service.approveOwnerRequest(
+          uid: uid, ownerId: ownerId, email: email, ownerName: ownerName);
     } catch (e) {
       rethrow;
     }
   }
+
   Future<void> rejectOwnerRequest(String uid) async {
     try {
       await _service.rejectOwnerRequest(uid);

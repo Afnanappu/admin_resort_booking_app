@@ -97,49 +97,57 @@ class _UserReportsScreenState extends State<IssuePostingPage> {
                     ),
                   ),
                   Expanded(
-                    child: ListView.builder(
-                      itemCount: filteredReports.length,
-                      itemBuilder: (context, index) {
-                        final report = filteredReports[index];
-                        return CustomAppContainer(
-                          margin:
-                              EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                          // shape: RoundedRectangleBorder(
-                          //   borderRadius: BorderRadius.circular(10),
-                          // ),
-                          child: ListTile(
-                            contentPadding: EdgeInsets.all(10),
-                            title: Text(report.title,
-                                style: TextStyle(fontWeight: FontWeight.bold)),
-                            subtitle: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text('Status: ${report.status}',
-                                    style: TextStyle(color: Colors.black87)),
-                                Text(
-                                    'Date: ${customDateFormat2(report.timestamp)}',
-                                    style: TextStyle(color: Colors.black54)),
-                              ],
-                            ),
-                            trailing: Icon(
-                              Icons.arrow_forward_ios_rounded,
-                              color: MyColors.grey,
-                            ),
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ScreenReportDetails(
-                                  report: report,
-                                  // onUpdateStatus: (id, newStatus) {
-                                  //   updateReportStatus(id, newStatus, reports);
-                                  // },
+                    child: filteredReports.isEmpty
+                        ? Center(
+                            child: Text('No issue reported'),
+                          )
+                        : ListView.builder(
+                            itemCount: filteredReports.length,
+                            itemBuilder: (context, index) {
+                              final report = filteredReports[index];
+                              return CustomAppContainer(
+                                margin: EdgeInsets.symmetric(
+                                    horizontal: 10, vertical: 5),
+                                // shape: RoundedRectangleBorder(
+                                //   borderRadius: BorderRadius.circular(10),
+                                // ),
+                                child: ListTile(
+                                  contentPadding: EdgeInsets.all(10),
+                                  title: Text(report.title,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  subtitle: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Status: ${report.status}',
+                                          style:
+                                              TextStyle(color: Colors.black87)),
+                                      Text(
+                                          'Date: ${customDateFormat2(report.timestamp)}',
+                                          style:
+                                              TextStyle(color: Colors.black54)),
+                                    ],
+                                  ),
+                                  trailing: Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    color: MyColors.grey,
+                                  ),
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => ScreenReportDetails(
+                                        report: report,
+                                        // onUpdateStatus: (id, newStatus) {
+                                        //   updateReportStatus(id, newStatus, reports);
+                                        // },
+                                      ),
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ),
+                              );
+                            },
                           ),
-                        );
-                      },
-                    ),
                   ),
                 ],
               );

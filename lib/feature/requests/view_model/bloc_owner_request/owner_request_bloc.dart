@@ -26,7 +26,12 @@ class OwnerRequestBloc extends Bloc<OwnerRequestEvent, OwnerRequestState> {
         emit(OwnerRequestState.loading());
 
         try {
-          await _repository.approveOwnerRequest(event.uid);
+          await _repository.approveOwnerRequest(
+            uid: event.uid,
+            ownerId: event.ownerId,
+            email: event.email,
+            ownerName: event.ownerName,
+          );
           emit(OwnerRequestState.requestedAccepted());
         } catch (e) {
           emit(OwnerRequestState.error(e.toString()));

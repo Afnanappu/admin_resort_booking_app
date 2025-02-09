@@ -1,7 +1,6 @@
 import 'package:admin_resort_booking_app/core/constants/my_colors.dart';
 import 'package:admin_resort_booking_app/core/constants/my_constants.dart';
 import 'package:admin_resort_booking_app/core/constants/text_styles.dart';
-import 'package:admin_resort_booking_app/core/utils/send_email.dart';
 import 'package:admin_resort_booking_app/feature/requests/view_model/bloc_owner_request/owner_request_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -56,13 +55,14 @@ class ActionButtonsForRequestDetailsScreen extends StatelessWidget {
               children: [
                 ElevatedButton.icon(
                   onPressed: () async {
-                    // Approve logic
-                    final isSent = await sendEmail(name, email, ownerId);
-                    if (isSent) {
-                      context.read<OwnerRequestBloc>().add(
-                            OwnerRequestEvent.approveOwner(uid),
-                          );
-                    }
+                    context.read<OwnerRequestBloc>().add(
+                          OwnerRequestEvent.approveOwner(
+                            uid: uid,
+                            ownerId: ownerId,
+                            email: email,
+                            ownerName: name,
+                          ),
+                        );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: MyColors.orange,

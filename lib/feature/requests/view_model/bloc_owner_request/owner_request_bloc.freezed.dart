@@ -19,21 +19,27 @@ mixin _$OwnerRequestEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchOwners,
-    required TResult Function(String uid) approveOwner,
+    required TResult Function(
+            String uid, String ownerId, String email, String ownerName)
+        approveOwner,
     required TResult Function(String uid) rejectOwner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchOwners,
-    TResult? Function(String uid)? approveOwner,
+    TResult? Function(
+            String uid, String ownerId, String email, String ownerName)?
+        approveOwner,
     TResult? Function(String uid)? rejectOwner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchOwners,
-    TResult Function(String uid)? approveOwner,
+    TResult Function(
+            String uid, String ownerId, String email, String ownerName)?
+        approveOwner,
     TResult Function(String uid)? rejectOwner,
     required TResult orElse(),
   }) =>
@@ -125,7 +131,9 @@ class _$FetchOwnersImpl implements _FetchOwners {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchOwners,
-    required TResult Function(String uid) approveOwner,
+    required TResult Function(
+            String uid, String ownerId, String email, String ownerName)
+        approveOwner,
     required TResult Function(String uid) rejectOwner,
   }) {
     return fetchOwners();
@@ -135,7 +143,9 @@ class _$FetchOwnersImpl implements _FetchOwners {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchOwners,
-    TResult? Function(String uid)? approveOwner,
+    TResult? Function(
+            String uid, String ownerId, String email, String ownerName)?
+        approveOwner,
     TResult? Function(String uid)? rejectOwner,
   }) {
     return fetchOwners?.call();
@@ -145,7 +155,9 @@ class _$FetchOwnersImpl implements _FetchOwners {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchOwners,
-    TResult Function(String uid)? approveOwner,
+    TResult Function(
+            String uid, String ownerId, String email, String ownerName)?
+        approveOwner,
     TResult Function(String uid)? rejectOwner,
     required TResult orElse(),
   }) {
@@ -200,7 +212,7 @@ abstract class _$$ApproveOwnerImplCopyWith<$Res> {
           _$ApproveOwnerImpl value, $Res Function(_$ApproveOwnerImpl) then) =
       __$$ApproveOwnerImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String uid});
+  $Res call({String uid, String ownerId, String email, String ownerName});
 }
 
 /// @nodoc
@@ -217,11 +229,26 @@ class __$$ApproveOwnerImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? uid = null,
+    Object? ownerId = null,
+    Object? email = null,
+    Object? ownerName = null,
   }) {
     return _then(_$ApproveOwnerImpl(
-      null == uid
+      uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
+              as String,
+      ownerId: null == ownerId
+          ? _value.ownerId
+          : ownerId // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      ownerName: null == ownerName
+          ? _value.ownerName
+          : ownerName // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -230,14 +257,24 @@ class __$$ApproveOwnerImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ApproveOwnerImpl implements _ApproveOwner {
-  const _$ApproveOwnerImpl(this.uid);
+  const _$ApproveOwnerImpl(
+      {required this.uid,
+      required this.ownerId,
+      required this.email,
+      required this.ownerName});
 
   @override
   final String uid;
+  @override
+  final String ownerId;
+  @override
+  final String email;
+  @override
+  final String ownerName;
 
   @override
   String toString() {
-    return 'OwnerRequestEvent.approveOwner(uid: $uid)';
+    return 'OwnerRequestEvent.approveOwner(uid: $uid, ownerId: $ownerId, email: $email, ownerName: $ownerName)';
   }
 
   @override
@@ -245,11 +282,15 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ApproveOwnerImpl &&
-            (identical(other.uid, uid) || other.uid == uid));
+            (identical(other.uid, uid) || other.uid == uid) &&
+            (identical(other.ownerId, ownerId) || other.ownerId == ownerId) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.ownerName, ownerName) ||
+                other.ownerName == ownerName));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, uid);
+  int get hashCode => Object.hash(runtimeType, uid, ownerId, email, ownerName);
 
   /// Create a copy of OwnerRequestEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -263,32 +304,38 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchOwners,
-    required TResult Function(String uid) approveOwner,
+    required TResult Function(
+            String uid, String ownerId, String email, String ownerName)
+        approveOwner,
     required TResult Function(String uid) rejectOwner,
   }) {
-    return approveOwner(uid);
+    return approveOwner(uid, ownerId, email, ownerName);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchOwners,
-    TResult? Function(String uid)? approveOwner,
+    TResult? Function(
+            String uid, String ownerId, String email, String ownerName)?
+        approveOwner,
     TResult? Function(String uid)? rejectOwner,
   }) {
-    return approveOwner?.call(uid);
+    return approveOwner?.call(uid, ownerId, email, ownerName);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchOwners,
-    TResult Function(String uid)? approveOwner,
+    TResult Function(
+            String uid, String ownerId, String email, String ownerName)?
+        approveOwner,
     TResult Function(String uid)? rejectOwner,
     required TResult orElse(),
   }) {
     if (approveOwner != null) {
-      return approveOwner(uid);
+      return approveOwner(uid, ownerId, email, ownerName);
     }
     return orElse();
   }
@@ -329,9 +376,16 @@ class _$ApproveOwnerImpl implements _ApproveOwner {
 }
 
 abstract class _ApproveOwner implements OwnerRequestEvent {
-  const factory _ApproveOwner(final String uid) = _$ApproveOwnerImpl;
+  const factory _ApproveOwner(
+      {required final String uid,
+      required final String ownerId,
+      required final String email,
+      required final String ownerName}) = _$ApproveOwnerImpl;
 
   String get uid;
+  String get ownerId;
+  String get email;
+  String get ownerName;
 
   /// Create a copy of OwnerRequestEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -409,7 +463,9 @@ class _$RejectOwnerImpl implements _RejectOwner {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchOwners,
-    required TResult Function(String uid) approveOwner,
+    required TResult Function(
+            String uid, String ownerId, String email, String ownerName)
+        approveOwner,
     required TResult Function(String uid) rejectOwner,
   }) {
     return rejectOwner(uid);
@@ -419,7 +475,9 @@ class _$RejectOwnerImpl implements _RejectOwner {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchOwners,
-    TResult? Function(String uid)? approveOwner,
+    TResult? Function(
+            String uid, String ownerId, String email, String ownerName)?
+        approveOwner,
     TResult? Function(String uid)? rejectOwner,
   }) {
     return rejectOwner?.call(uid);
@@ -429,7 +487,9 @@ class _$RejectOwnerImpl implements _RejectOwner {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchOwners,
-    TResult Function(String uid)? approveOwner,
+    TResult Function(
+            String uid, String ownerId, String email, String ownerName)?
+        approveOwner,
     TResult Function(String uid)? rejectOwner,
     required TResult orElse(),
   }) {

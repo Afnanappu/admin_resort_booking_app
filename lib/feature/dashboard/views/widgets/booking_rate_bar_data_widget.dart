@@ -179,7 +179,7 @@ class _BookingRateBarDataWidgetState extends State<BookingRateBarDataWidget> {
                               .reduce((prev, curr) =>
                                   prev.count > curr.count ? prev : curr)
                               .count +
-                          20
+                          5
                       : 100,
                   gridData: FlGridData(show: true, drawVerticalLine: false),
                   titlesData: FlTitlesData(

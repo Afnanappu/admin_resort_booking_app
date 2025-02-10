@@ -22,8 +22,6 @@ class OwnerManagementTile extends StatelessWidget {
       ),
       child: ListTile(
         onTap: () {
-          //TODO: navigate to owner details page
-
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => ScreenOwnerDetails(
@@ -35,13 +33,15 @@ class OwnerManagementTile extends StatelessWidget {
           //context.push('/${AppRoutes.requestOwnerDetails}');
         },
         leading: CircleAvatar(
+          
           backgroundImage: owner.profilePicture == null
-              ? NetworkImage('https://via.placeholder.com/150')
+              ? null
               : MemoryImage(
                   base64Decode(
                     owner.profilePicture!,
                   ),
                 ),
+          child: owner.profilePicture == null ? Icon(Icons.person) : null,
         ),
         title: Text(owner.name,
             style: const TextStyle(fontWeight: FontWeight.bold)),

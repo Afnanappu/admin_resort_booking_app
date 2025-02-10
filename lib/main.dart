@@ -3,6 +3,9 @@ import 'package:admin_resort_booking_app/feature/dashboard/services/dashboard_se
 import 'package:admin_resort_booking_app/feature/dashboard/view_model/bloc_dashboard/dashboard_bloc.dart';
 import 'package:admin_resort_booking_app/feature/issue_posting/services.dart/report_issue_services.dart';
 import 'package:admin_resort_booking_app/feature/issue_posting/view_model/cubit/cubit_report_issue/report_issue_cubit.dart';
+import 'package:admin_resort_booking_app/feature/push_notification/repository/notification_repository.dart';
+import 'package:admin_resort_booking_app/feature/push_notification/services/notification_service.dart';
+import 'package:admin_resort_booking_app/feature/push_notification/view_model/cubit/cubit/push_notification_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -189,6 +192,15 @@ class ResortAdminApp extends StatelessWidget {
               ReportIssueServices(),
             ),
           ),
+          
+          BlocProvider(
+            create: (context) => PushNotificationCubit(
+              NotificationRepository(
+                service: NotificationService(),
+              ),
+            ),
+          ),
+
           BlocProvider(
             create: (context) =>
                 DashboardBloc(context.read<DashboardRepository>()),

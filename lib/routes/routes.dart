@@ -140,18 +140,18 @@ final routes = GoRouter(
         ),
 
         //owner management
-        StatefulShellBranch(
-          routes: [
-            GoRoute(
-              name: AppRoutes.revenueAndReport,
-              path: '/${AppRoutes.revenueAndReport}',
-              pageBuilder: (context, state) => customTransitionPage(
-                state,
-                RevenueReportPage(),
-              ),
-            ),
-          ],
-        ),
+        // StatefulShellBranch(
+        //   routes: [
+        //     GoRoute(
+        //       name: AppRoutes.revenueAndReport,
+        //       path: '/${AppRoutes.revenueAndReport}',
+        //       pageBuilder: (context, state) => customTransitionPage(
+        //         state,
+        //         RevenueReportPage(),
+        //       ),
+        //     ),
+        //   ],
+        // ),
         //owner management
         StatefulShellBranch(
           routes: [

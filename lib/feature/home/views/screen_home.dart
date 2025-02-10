@@ -7,7 +7,7 @@ class HomeWithSideRail extends StatelessWidget {
   const HomeWithSideRail({super.key, required this.navigationShell});
 
   final StatefulNavigationShell navigationShell;
-
+  final padding = 8.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,44 +22,52 @@ class HomeWithSideRail extends StatelessWidget {
                 index,
               );
             },
-            destinations: const [
+            destinations: [
               NavigationRailDestination(
+                padding: EdgeInsets.all(padding),
                 icon: Icon(Icons.dashboard),
                 label: Text('Dashboard'),
               ),
               NavigationRailDestination(
+                padding: EdgeInsets.all(padding),
                 icon: Icon(Icons.people),
                 label: Text('Users'),
               ),
               NavigationRailDestination(
+                padding: EdgeInsets.all(padding),
                 icon: Icon(Icons.apartment),
                 label: Text('Owners'),
               ),
               NavigationRailDestination(
+                padding: EdgeInsets.all(padding),
                 icon: Icon(Icons.request_page),
                 label: Text('Requests'),
               ),
+              // NavigationRailDestination(
+              //   icon: Icon(Icons.bar_chart),
+              //   label: Text('Reports'),
+              // ),
               NavigationRailDestination(
-                icon: Icon(Icons.bar_chart),
-                label: Text('Reports'),
-              ),
-              NavigationRailDestination(
+                padding: EdgeInsets.all(padding),
                 icon: Icon(Icons.notifications),
                 label: Text('Notifications'),
               ),
               NavigationRailDestination(
+                padding: EdgeInsets.all(padding),
                 icon: Icon(Icons.post_add),
                 label: Text('Issues'),
               ),
               NavigationRailDestination(
+                padding: EdgeInsets.all(padding),
                 icon: Icon(Icons.settings),
                 label: Text('Additional Options'),
               ),
             ],
             indicatorColor: MyColors.orangeBackgroundDark,
             selectedLabelTextStyle:
+                MyTextStyles.bodyLargeNormalWhite.copyWith(fontSize: 20),
+            unselectedLabelTextStyle:
                 MyTextStyles.bodyLargeNormalWhite.copyWith(fontSize: 18),
-            unselectedLabelTextStyle: MyTextStyles.bodyLargeNormalWhite,
           ),
           Expanded(
             child: navigationShell,

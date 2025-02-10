@@ -9,12 +9,14 @@ class CustomElevatedNormalButton extends StatelessWidget {
     this.isOutlined = false,
     required this.onPressed,
     required this.text,
+    this.isLoading = false,
   });
 
   final Color bgColor;
   final bool isOutlined;
   final VoidCallback onPressed;
   final String text;
+  final bool isLoading;
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +34,28 @@ class CustomElevatedNormalButton extends StatelessWidget {
         ),
       ),
       onPressed: onPressed,
-      child: Text(
-        text,
-        style: TextStyle(
-          color: !isOutlined ? MyColors.white : MyColors.orange,
-        ),
-      ),
+      child: isLoading
+          ? Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 15,
+              ),
+              child: SizedBox(
+                height: 30,
+                width: 30,
+                child: CircularProgressIndicator.adaptive(
+                  strokeWidth: 3.5,
+                  valueColor:
+                      AlwaysStoppedAnimation(MyColors.scaffoldDefaultColor),
+                ),
+              ),
+            )
+          : Text(
+              text,
+              style: TextStyle(
+                color: !isOutlined ? MyColors.white : MyColors.orange,
+              ),
+            ),
     );
   }
 }

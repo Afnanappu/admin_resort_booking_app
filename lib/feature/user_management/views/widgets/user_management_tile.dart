@@ -22,12 +22,13 @@ class UserManagementTile extends StatelessWidget {
         leading: CircleAvatar(
           radius: 25,
           backgroundImage: user.profilePicture == null
-              ? NetworkImage('https://via.placeholder.com/150')
+              ? null
               : MemoryImage(
                   base64Decode(
                     user.profilePicture!,
                   ),
                 ),
+          child: user.profilePicture == null ? Icon(Icons.person) : null,
         ),
         title: Text(user.name,
             style: const TextStyle(fontWeight: FontWeight.bold)),
